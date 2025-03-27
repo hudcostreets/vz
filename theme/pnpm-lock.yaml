@@ -1,0 +1,23 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@slidev/types':
+        specifier: ^0.47.0
+        version: 0.47.5
+
+packages:
+
+  '@slidev/types@0.47.5':
+    resolution: {integrity: sha512-X67V4cCgM0Sz50bP8GbVzmiL8DHC2IXvdKcsN7DlxHyf+/T4d9GveeGukwha5Fx3MuYeGZWKag7TFL2ZY4w54A==}
+    engines: {node: '>=18.0.0'}
+
+snapshots:
+
+  '@slidev/types@0.47.5': {}
