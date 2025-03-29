@@ -3,6 +3,13 @@ footer {
     font-size: 0.8rem;
     border-bottom: 1px dotted;
   }
+  .foot-logo {
+    width: 6rem;
+    height: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   img {
     width: 6rem;
   }
@@ -10,9 +17,15 @@ footer {
 .dark footer {
   /* TODO: CSS var / theme this*/
   color: white;
+  .foot-logo {
+    background-image: url(/HCCS_ID_Knockout_Hi.png);
+  }
 }
 .light footer {
   color: black;
+  .foot-logo {
+    background-image: url(/HCCS_ID_Primary_Hi.png);
+  }
 }
 .dark .slidev-layout {
   background: #00793f;
