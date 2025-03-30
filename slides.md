@@ -303,7 +303,7 @@ Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
 [`s3://ctbk`]: https://ctbk.s3.amazonaws.com/index.html
 [`s3://tripdata`]: https://tripdata.s3.amazonaws.com/index.html
 [cb data]: https://www.citibikenyc.com/system-data
-[ctbk gh]: https://github.com/neighbor-ryan/ctbk.dev
+[ctbk gh]: https://github.com/hudcostreets/ctbk.dev
 [2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
 [2502]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2502
 [subs]: https://ctbk.dev/?s=u&pct
@@ -516,7 +516,7 @@ class: srcs
 [`s3://nj-crashes/njdot`]: https://nj-crashes.s3.amazonaws.com/index.html#/njdot/data
 [hudcostreets/path]: https://github.com/hudcostreets/path
 [hudcostreets/nj-crashes]: https://github.com/hudcostreets/nj-crashes
-[hudcostreets/ctbk.dev]: https://github.com/neighbor-ryan/ctbk.dev
+[hudcostreets/ctbk.dev]: https://github.com/hudcostreets/ctbk.dev
 [HCCS NYMTC]: https://drive.google.com/drive/folders/1Dm-ZBYxWaOaGgm08XCGOZCuvU2IQaPLN
 [HCCS NJTA]: https://drive.google.com/drive/folders/1Ff4TUP6MmuoGvE0qTE2cgBukoxstB-93
 [HCCS NJT]: https://drive.google.com/drive/folders/1IkeX8EOavWC1uUa1eHIIbVmE8i5tDuwE
