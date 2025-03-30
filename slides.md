@@ -427,15 +427,16 @@ class: jc
 .jc + footer { display: none }
 </style>
 
-# JC bike/ward map
-- ≈2,000 lane-miles for cars
-- ≈20 PBL miles
+# [map.bikejc.org]
+- Wraps/Joins [JC ArcGIS layers][jc gis]
+- ≈2,000 lane-miles for cars, ≈20 miles of protected bike lanes
+
+See also:
 - [JC Bike Master Plan][bmp] / [bikejc.github.io/bike-master-plan] / [PDF]
-- Mirror/Join [JC ArcGIS layers][jc gis].
-- [NJGIN index] of agency ArcGIS servers
+- [NJGIN index] of agency ArcGIS servers:
+  [![](/njgin.png)][NJGIN index]
 
-[![](/njgin.png)][NJGIN index]
-
+[map.bikejc.org]: https://map.bikejc.org
 [bmp]: https://street-plans.com/lets-ride-jc-bicycle-master-plan-jersey-city-nj/
 [bikejc.github.io/bike-master-plan]: https://bikejc.github.io/bike-master-plan/
 [PDF]: https://cdn5-hosted.civiclive.com/UserFiles/Servers/Server_6189660/File/Community/Transportation/LetsRideJCMasterPlan-FinalDraft%206.16.19_09_30.pdf
