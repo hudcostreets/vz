@@ -223,7 +223,7 @@ dragPos:
 .slidev-layout.nymtc {
   display: grid;
   padding: 1.5rem 2.5rem 2rem 2.5rem;
-  grid-template-columns: 57% 31%;
+  grid-template-columns: 57% 40%;
   gap: 1rem;
   font-size: 1rem;
   .col-right { padding-top: 1rem }
@@ -238,7 +238,7 @@ dragPos:
 <div class="col-right">
   <h4>
     <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Transportation-Data-and-Statistics/Publications/Hub-Bound-Travel" target="_blank">
-      NYMTC Hub-Bound Travel
+      NYMTC "Hub-Bound Travel" reports
     </a>
   </h4>
   <p>Annual study of modes / vehicles in/out of Manhattan CBD</p>
