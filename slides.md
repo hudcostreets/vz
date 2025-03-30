@@ -269,7 +269,7 @@ class: ctbk
   padding: 2rem 1rem 0 2rem;
   p { margin-bottom: 0.5rem }
   img:not(.right-overlay) {
-    height: 13.5rem;
+    height: 14.8rem;
     position: absolute;
     padding-left: 1rem;
     bottom: 2%;
