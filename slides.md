@@ -154,17 +154,17 @@ class: us
 ---
 class: plots
 dragPos:
-  hom: 20,70,240,_
-  sp: 20,227,240,_
-  path: 20,384,240,_
-  cb: 770,20,200,_
-  cb-u: 770,150,200,_
-  cb-r: 770,280,200,_
-  cb-g: 770,410,200,_
-  xbl: 457,75,310,_
-  cb-m: 447,321,308,_
-  jc: 265,69,190,_
-  hc: 265,323,190,_
+  hom: 16,75,215,148
+  sp: 16,234,215,148
+  path: 16,393,215,147
+  jc: 241,73,185,242
+  hc: 241,325,185,216
+  xbl: 436,21,331,267
+  cb-m: 436,298,331,242
+  cb: 777,20,192,124
+  cb-r: 777,154,192,120
+  cb-g: 777,286,192,120
+  cb-u: 777,418,192,120
 ---
 
 <style>
@@ -178,25 +178,31 @@ dragPos:
 }
 </style>
 
+<!--
 <div v-drag="'hom'"><img src="/hom.png"/></div>
 <div v-drag="'sp'"><img src="/njsp.png"/></div>
 <div v-drag="'path'"><img src="/path-vs19.png"/></div>
-<div v-drag="'cb'"><img src="/cb.png"/></div>
-<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
-<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
-<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
 <div v-drag="'jc'"><img src="/jc.gif" /></div>
 <div v-drag="'hc'"><img src="/hc-map.png"/></div>
 <div v-drag="'xbl'"><img src="/xbl.png"/></div>
 <div v-drag="'cb-m'"><img src="/g2410.png"/></div>
-
-<!--
-<div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" class="jc" /></a></div>
-<div v-drag="'cb'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png" class="cb"/></a></div>
-<div v-drag="'xbl'"><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png" class="xbl"/></a></div>
-<div v-drag="'hom'"><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img class="hom" src="/hom.png"/></a></div>
-<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png" class="path"/></a></div>
+<div v-drag="'cb'"><img src="/cb.png"/></div>
+<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
+<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
+<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
 -->
+
+<div v-drag="'hom'" ><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img src="/hom.png"/></a></div>
+<div v-drag="'sp'"  ><a target="_blank" href="https://crashes.hudcostreets.org/#per-year"><img src="/njsp.png"/></a></div>
+<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png"/></a></div>
+<div v-drag="'jc'"  ><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" /></a></div>
+<div v-drag="'hc'"  ><a target="_blank" href="https://crashes.hudcostreets.org/map/hudson"><img src="/hc-map.png"/></a></div>
+<div v-drag="'xbl'" ><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png"/></a></div>
+<div v-drag="'cb-m'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png"/></a></div>
+<div v-drag="'cb'"  ><a target="_blank" href="https://ctbk.dev/"><img src="/cb.png"/></a></div>
+<div v-drag="'cb-r'"><a target="_blank" href="https://ctbk.dev/?s=b&pct&rt=ce&d=2002-"><img src="/cb-r.png"/></a></div>
+<div v-drag="'cb-g'"><a target="_blank" href="https://ctbk.dev/?y=m&s=g&pct&g=mf&d=1406-2102"><img src="/cb-g.png"/></a></div>
+<div v-drag="'cb-u'"><a target="_blank" href="https://ctbk.dev/?s=u&pct"><img src="/cb-u.png"/></a></div>
 
 # Proving it, locally
 
@@ -209,16 +215,17 @@ dragPos:
 # layout: two-cols
 class: nymtc
 dragPos:
-  xbl: 40,145,548,_
-  nymtc: 591,144,286,_
+  xbl: 40,138,515,_
+  nymtc: 567,135,310,_
 ---
 
 <style>
 .slidev-layout.nymtc {
   display: grid;
-  padding: 2rem 2.5rem 2rem 2.5rem;
-  grid-template-columns: 59.5% 31%;
+  padding: 1.5rem 2.5rem 2rem 2.5rem;
+  grid-template-columns: 57% 31%;
   gap: 1rem;
+  font-size: 1rem;
   .col-right { padding-top: 1rem }
 }
 </style>
@@ -270,6 +277,7 @@ class: ctbk
   }
   .right-overlay {
     border: 1rem solid #00793f;
+    border-left: none;
   }
 }
 </style>
@@ -363,6 +371,7 @@ class: path
   .right-overlay {
     border: 1rem solid #00793f;
   }
+  .small { font-size: 0.8rem; }
 }
 </style>
 
@@ -371,6 +380,8 @@ PATH ridership data
 - Weekend ridership exceeding pre-COVID levels (despite worse service)
 - Weekdays ≈60-70% of pre-COVID levels
 - [PANYNJ Traffic and Volume stats](https://www.panynj.gov/path/en/about/stats.html) (PDFs)
+<v-click>
+
 - [Tabula]: extract tables from PDFs (library+GUI)
   ```json
   [
@@ -380,12 +391,13 @@ PATH ridership data
       { "y1": 620.96, "x1": 70.781, "y2": 761.757, "x2": 569.691 }
   ]
   ```
-  ([PATH-Monthly-Ridership-Report.json])
-- Soon️?: LLMs / ML tools for reading PDFs
+  <span class="small">([PATH-Monthly-Ridership-Report.json])</span>
+- Soon️(?): LLMs / ML tools for reading PDFs
+</v-click>
 
 [PATH-Monthly-Ridership-Report.json]: https://github.com/hudcostreets/path/blob/main/templates/PATH-Monthly-Ridership-Report.json
 
-<img v-click class="right-overlay" src="/tabula1.png"/>
+<v-click at="+0"><img class="right-overlay" src="/tabula1.png"/></v-click>
 
 <img v-click class="right-overlay" src="/tabula2.png"/>
 
@@ -458,14 +470,16 @@ class: hob
 
 # [2024 Bike Hoboken Traffic Injury Report][bh24]
 - [Bike Hoboken] OPRA'd all 2024 crash records
-- Data entry from PDFs (100's of volunteer-hours)
+- Data entry from PDFs (many volunteer-hours)
 - [NJTR-1] forms (crashes involving autos) and "incident reports" (ped and/or bike only)
 
-**0 pedestrian injuries involving bicycles or e-bikes on a sidewalk** (despite brouhaha / "test+vest" ordinance)
+**0 pedestrian injuries involving bicycles or e-bikes on a sidewalk** (despite [brouhaha], "test+vest" [ordinance][ord])
 
 [bh24]: https://www.bikehoboken.org/articles/2024-bike-hoboken-traffic-injury-report
 [Bike Hoboken]: https://www.bikehoboken.org/
 [NJTR-1]: https://www.nj.gov/transportation/refdata/accident/pdf/NJTR-1CrashReportManual2023.pdf
+[brouhaha]: https://www.nj.com/hudson/2024/03/tests-and-vests-for-hoboken-ebike-workers-is-now-law-despite-pushback-from-police-chief.html?gift=03ec6bf2-a21c-4217-beb2-00b526b0d92a
+[ord]:https://www.hobokennj.gov/resources/commercial-e-delivery-operators
 
 ---
 class: srcs
