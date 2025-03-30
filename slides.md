@@ -154,15 +154,18 @@ class: us
 ---
 class: plots
 dragPos:
-  jc: 724,33,241,_
-  cb: 351,35,367,_
-  path: 44,330,320,_
-  xbl: 44,61,386,_
-  hom: 370,306,369,_
+  jc: 669,24,211,_
+  cb: 22,87,319,_
+  path: 22,321,319,_
+  xbl: 348,24,402,_
+  hom: 348,321,330,_
+  hc: 687,308,193,_
+  sp: 480,368,216,_
 ---
 
 <style>
 .slidev-layout.plots {
+  /*& + footer { display: none }*/
   padding-top: 1.6rem;
   img {
     width: 100%;
@@ -171,11 +174,14 @@ dragPos:
 }
 </style>
 
-<div v-drag="'jc'"><img src="/jc.gif" class="jc" /></div>
-<div v-drag="'cb'"><img src="/g2410.png" class="cb"/></div>
-<div v-drag="'xbl'"><img src="/xbl2.png" class="xbl"/></div>
-<div v-drag="'hom'"><img class="hom" src="/hom.png"/></div>
-<div v-drag="'path'"><img src="/path-vs19.png" class="path"/></div>
+<div v-drag="'jc'"><img src="/jc.gif" /></div>
+<div v-drag="'hc'"><img src="/hc-map.png"/></div>
+<div v-drag="'cb'"><img src="/g2410.png"/></div>
+<div v-drag="'xbl'"><img src="/xbl2.png"/></div>
+<div v-drag="'path'"><img src="/path-vs19.png"/></div>
+<div v-drag="'hom'"><img src="/hom.png"/></div>
+
+[//]: # (<div v-drag="'sp'"><img src="/njsp.png"/></div>)
 
 <!--
 <div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" class="jc" /></a></div>
@@ -331,9 +337,8 @@ scale: 0.6
 class: path
 ---
 <style>
-/*.path + footer { width: 50%; right: auto; }*/
-.path + footer { display: none }
 .slidev-layout.path {
+  & + footer { display: none }
   pre {
     background-color: #f8f8f8;
     font-size: 0.6rem;
@@ -404,7 +409,7 @@ class: jc
 </style>
 
 # JC bike/ward map
-- 2,000 lane miles for cars
+- ≈2,000 lane-miles for cars
 - ≈20 PBL miles
 - [JC Bike Master Plan][bmp] / [bikejc.github.io/bike-master-plan] / [PDF]
 - Mirror/Join [JC ArcGIS layers][jc gis].
