@@ -268,6 +268,7 @@ class: ctbk
 .slidev-layout.ctbk {
   padding: 2rem 1rem 0 2rem;
   p { margin-bottom: 0.5rem }
+  li { line-height: 1.75rem }
   img:not(.right-overlay) {
     height: 14.8rem;
     position: absolute;
