@@ -157,14 +157,14 @@ dragPos:
   hom: 20,70,240,_
   sp: 20,227,240,_
   path: 20,384,240,_
-  cb: 270,70,200,_
-  cb-g: 270,370,200,_
-  cb-u: 270,170,200,_
-  cb-r: 270,270,200,_
-  xbl: 450,22,392,_
+  cb: 770,20,200,_
+  cb-u: 770,150,200,_
+  cb-r: 770,280,200,_
+  cb-g: 770,410,200,_
+  xbl: 457,75,310,_
   cb-m: 447,321,308,_
-  jc: 760,22,208,_
-  hc: 759,301,209,_
+  jc: 265,69,190,_
+  hc: 265,323,190,_
 ---
 
 <style>
@@ -187,13 +187,13 @@ dragPos:
 <div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
 <div v-drag="'jc'"><img src="/jc.gif" /></div>
 <div v-drag="'hc'"><img src="/hc-map.png"/></div>
-<div v-drag="'xbl'"><img src="/xbl2.png"/></div>
+<div v-drag="'xbl'"><img src="/xbl.png"/></div>
 <div v-drag="'cb-m'"><img src="/g2410.png"/></div>
 
 <!--
 <div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" class="jc" /></a></div>
 <div v-drag="'cb'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png" class="cb"/></a></div>
-<div v-drag="'xbl'"><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl2.png" class="xbl"/></a></div>
+<div v-drag="'xbl'"><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png" class="xbl"/></a></div>
 <div v-drag="'hom'"><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img class="hom" src="/hom.png"/></a></div>
 <div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png" class="path"/></a></div>
 -->
@@ -240,9 +240,9 @@ dragPos:
 [xbl]: https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html
 [xbl faq]: https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html
 
-<a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl2.png"/></a>
+<a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
 <!--
-<img v-drag="'xbl'" src="/xbl2.png"/>
+<img v-drag="'xbl'" src="/xbl.png"/>
 -->
 
 <a href="https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2023%20Hub%20Bound/2023%20Hub%20Bound%20Report-%203.18.25.pdf?ver=7S_sDok5O_aw9bEN3A-NjA%3d%3d" target="_blank"><img v-drag="'nymtc'" src="/nymtc-hbt.png"/></a>
