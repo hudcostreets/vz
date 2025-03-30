@@ -154,18 +154,22 @@ class: us
 ---
 class: plots
 dragPos:
-  jc: 669,24,211,_
-  cb: 22,87,319,_
-  path: 22,321,319,_
-  xbl: 348,24,402,_
-  hom: 348,321,330,_
-  hc: 687,308,193,_
-  sp: 480,368,216,_
+  hom: 20,70,240,_
+  sp: 20,227,240,_
+  path: 20,384,240,_
+  cb: 270,70,200,_
+  cb-g: 270,370,200,_
+  cb-u: 270,170,200,_
+  cb-r: 270,270,200,_
+  xbl: 450,22,392,_
+  cb-m: 447,321,308,_
+  jc: 760,22,208,_
+  hc: 759,301,209,_
 ---
 
 <style>
 .slidev-layout.plots {
-  /*& + footer { display: none }*/
+  & + footer { display: none }
   padding-top: 1.6rem;
   img {
     width: 100%;
@@ -174,14 +178,17 @@ dragPos:
 }
 </style>
 
+<div v-drag="'hom'"><img src="/hom.png"/></div>
+<div v-drag="'sp'"><img src="/njsp.png"/></div>
+<div v-drag="'path'"><img src="/path-vs19.png"/></div>
+<div v-drag="'cb'"><img src="/cb.png"/></div>
+<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
+<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
+<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
 <div v-drag="'jc'"><img src="/jc.gif" /></div>
 <div v-drag="'hc'"><img src="/hc-map.png"/></div>
-<div v-drag="'cb'"><img src="/g2410.png"/></div>
 <div v-drag="'xbl'"><img src="/xbl2.png"/></div>
-<div v-drag="'path'"><img src="/path-vs19.png"/></div>
-<div v-drag="'hom'"><img src="/hom.png"/></div>
-
-[//]: # (<div v-drag="'sp'"><img src="/njsp.png"/></div>)
+<div v-drag="'cb-m'"><img src="/g2410.png"/></div>
 
 <!--
 <div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" class="jc" /></a></div>
