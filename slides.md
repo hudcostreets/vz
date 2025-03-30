@@ -154,11 +154,11 @@ class: us
 ---
 class: plots
 dragPos:
-  jc: 724,18,241,_
-  cb: 345,27,367,_
-  path: 45,303,360,_
-  xbl: 45,78,368,_
-  hom: 420,303,372,_
+  jc: 724,33,241,_
+  cb: 351,35,367,_
+  path: 44,330,320,_
+  xbl: 44,61,386,_
+  hom: 370,306,369,_
 ---
 
 <style>
@@ -171,19 +171,19 @@ dragPos:
 }
 </style>
 
-<!--
 <div v-drag="'jc'"><img src="/jc.gif" class="jc" /></div>
 <div v-drag="'cb'"><img src="/g2410.png" class="cb"/></div>
 <div v-drag="'xbl'"><img src="/xbl2.png" class="xbl"/></div>
 <div v-drag="'hom'"><img class="hom" src="/hom.png"/></div>
 <div v-drag="'path'"><img src="/path-vs19.png" class="path"/></div>
--->
 
+<!--
 <div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" class="jc" /></a></div>
 <div v-drag="'cb'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png" class="cb"/></a></div>
 <div v-drag="'xbl'"><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl2.png" class="xbl"/></a></div>
 <div v-drag="'hom'"><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img class="hom" src="/hom.png"/></a></div>
 <div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png" class="path"/></a></div>
+-->
 
 # Proving it, locally
 
@@ -196,15 +196,15 @@ dragPos:
 # layout: two-cols
 class: nymtc
 dragPos:
-  xbl: 36,160,540,_
-  nymtc: 596,157,279,_
+  xbl: 40,145,548,_
+  nymtc: 591,144,286,_
 ---
 
 <style>
 .slidev-layout.nymtc {
   display: grid;
   padding: 2rem 2.5rem 2rem 2.5rem;
-  grid-template-columns: 60% 31%;
+  grid-template-columns: 59.5% 31%;
   gap: 1rem;
   .col-right { padding-top: 1rem }
 }
@@ -227,9 +227,9 @@ dragPos:
 [xbl]: https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html
 [xbl faq]: https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html
 
-<a href="https://github.com/hudcostreets/hudson-transit" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
+<a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl2.png"/></a>
 <!--
-<img v-drag="'xbl'" src="/xbl.png"/>
+<img v-drag="'xbl'" src="/xbl2.png"/>
 -->
 
 <a href="https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2023%20Hub%20Bound/2023%20Hub%20Bound%20Report-%203.18.25.pdf?ver=7S_sDok5O_aw9bEN3A-NjA%3d%3d" target="_blank"><img v-drag="'nymtc'" src="/nymtc-hbt.png"/></a>
@@ -264,11 +264,11 @@ class: ctbk
 # [ctbk.dev]
 Citi Bike dashboard
 
-- Est. Oct '20, Updates ≈automatically each month
-- Cleaned data at [`s3://ctbk`], code [on &nbsp;<logos-github-icon color="white" />][ctbk gh]
+- Lyft [publishes][cb data] data monthly: [`s3://tripdata`]
+- Cleaned/Mirrored: [`s3://ctbk`], [&nbsp;<logos-github-icon color="white" />][ctbk gh]
 - 3.8MM rides/mo (86k/mo in JC+HOB)
 - [67%][ebikes] ebike share, [82%][subs] annual subscribers
-- Grove St (≈2 car-parking spots): 90-180 ride ends / day ([Feb '25][2502], [Oct '24][2410])
+- Grove St (≈2 car-parking spots): 90-180 ride ends per day ([Feb '25][2502], [Oct '24][2410])
 
 [![](/g2410.png)][2410]
 
@@ -280,6 +280,8 @@ Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
 
 [ctbk.dev]: https://ctbk.dev
 [`s3://ctbk`]: https://ctbk.s3.amazonaws.com/index.html
+[`s3://tripdata`]: https://tripdata.s3.amazonaws.com/index.html
+[cb data]: https://www.citibikenyc.com/system-data
 [ctbk gh]: https://github.com/neighbor-ryan/ctbk.dev
 [2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
 [2502]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2502
