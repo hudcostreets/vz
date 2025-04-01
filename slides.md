@@ -21,51 +21,29 @@ Ryan Williams
 
 ---
 class: hccs
+dragPos:
+  tt: 41,347,371,180
+  bus: 427,347,188,180
+  njt: 627,347,188,180
+  path: 427,133,265,_
+  vz: 707,30,228,_
 ---
+
 <style>
 .slidev-layout.hccs {
+  padding-top: 1.5rem;
+  padding-left: 2.7rem;
   h1 { margin-bottom: 0 }
   p { margin: 0.4rem 0; }
   li { line-height: 2rem }
   blockquote { width: 75% }
+  div.path { height: 36.5% }
   img {
-    position: absolute;
-    object-fit: cover;
-    object-position: top center;
-    /*TODO: put these in an actual grid*/
-    &[src="/vz.png"] {
-      right: 1.3%;
-      bottom: 36%;
-      width: 22.5%;
-    }
-    &[src="/path.jpg"] {
-      width: 27%;
-      height: 36.5%;
-      bottom: 36%;
-      right: 25%;
+    width: 100%;
+    height: 100%;
+    &[src*="path"] {
       object-fit: cover;
       object-position: top center;
-    }
-  }
-
-  .imgs {
-    display: flex;
-    height: 32%;
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-    gap: 1.5%;
-    & > div {
-      flex: 0 0 auto; /* Don't grow or shrink */
-      height: 100%;
-      position: relative;
-      z-index: 1;
-    }
-    img {
-      height: 100%;
-      object-fit: contain;
-      position: static;
-      left: auto;
     }
   }
 }
@@ -85,13 +63,18 @@ Campaigns:
 
 👉 [hudcostreets.org]
 
-<div class="imgs">
-  <div><a target="_blank" href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
-  <div><a target="_blank" href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/"><img src="/bus.jpeg"/></a></div>
-  <div><a target="_blank" href="https://newsletter.hudcostreets.org/archive/action-alert-tell-gov-murphy-142m-for-nj-transit/"><img src="/njt.jpeg"/></a></div>
-</div>
-<a target="_blank" href="https://hudcostreets.org/panynj"><img src="/path.jpg"/></a>
-<a target="_blank" href="https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/"><img src="/vz.png"/></a>
+<div v-drag="'tt'"><a target="_blank" href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
+<div v-drag="'bus'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/"><img src="/bus.jpeg"/></a></div>
+<div v-drag="'njt'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/action-alert-tell-gov-murphy-142m-for-nj-transit/"><img src="/njt.jpeg"/></a></div>
+<div v-drag="'path'" class="path"><a target="_blank" href="https://hudcostreets.org/panynj"><img src="/path.jpg"/></a></div>
+<div v-drag="'vz'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/"><img src="/vz.png"/></a></div>
+<!--
+<img v-drag="'tt'" src="/tt.png"/>
+<img v-drag="'bus'" src="/bus.jpeg"/>
+<img v-drag="'njt'" src="/njt.jpeg"/>
+<img v-drag="'path'" src="/path.jpg"/>
+<img v-drag="'vz'" src="/vz.png"/>
+-->
 
 [PATH]: https://hudcostreets.org/panynj
 [CP]: https://nyc.streetsblog.org/2025/03/21/advocates-demand-new-jersey-agencies-cough-up-congestion-pricing-data
