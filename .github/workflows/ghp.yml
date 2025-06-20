@@ -1,4 +1,4 @@
-name: Deploy to bw25.hccs.dev GitHub Pages
+name: Deploy to vz.hccs.dev GitHub Pages
 on:
   push: { branches: [main] }
   workflow_dispatch:

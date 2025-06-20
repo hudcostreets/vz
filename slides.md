@@ -1,7 +1,7 @@
 ---
 theme: ./theme
-title: data @ hudcostreets
-info: NJ Bike Walk Summit 2025 slides, Hudson County Complete Streets
+title: Toward Vision Zero in Hudson County
+info: Hudson County Vision Zero Task Force presentation by Hudson County Complete Streets
 selectable: true
 class: text-center  # apply unocss classes to the current slide
 colorSchema: dark
@@ -11,13 +11,13 @@ mdc: true
 layout: section
 ---
 
-# Data @ Hudson County Complete Streets
+# Toward Vision Zero in Hudson County
 
-[NJ Bike Walk Summit], 3/29/25
+Hudson County Vision Zero Task Force meeting, 6/24/25
 
 Ryan Williams
 
-[NJ Bike Walk Summit]: https://njbwc.org/summit-2025/
+Hudson County Complete Streets
 
 ---
 class: hccs
