@@ -149,6 +149,46 @@ class: us
 <a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
 
 ---
+class: bike
+---
+<style>
+.bike + footer { display: none; }
+.slidev-layout.bike {
+  padding: 2rem 1rem 0 2rem;
+  p { margin-bottom: 0.5rem }
+  li { line-height: 1.75rem }
+  img:not(.right-overlay) {
+    /*height: 14.8rem;*/
+    position: absolute;
+    padding-left: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+  }
+  video.wt {
+    border: 1rem solid #00793f;
+    border-left: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+}
+</style>
+# Hudson County – <br>Bike Mode Share Opportunity
+- Jersey City Ward Tour: 2,000+ bikes, 5-20 minutes
+  Busiest hour of the year on JFK, 139, Palisade, etc.
+  - JFK: 25,000 vehicles per day, ≤2,000 per hour
+- Most children are capable of biking from Bayonne to Hoboken, and back
+  - Letting kids bike safely = reduce traffic, fix school drop-off, restore autonomy (to parents too)
+  - Bike buses
+  - Safe routes to school
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IFg5PRpeLzs?t=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<video class="wt" src="/wt.mp4" autoplay></video>
+
+
+---
 class: plots
 dragPos:
   hom: 16,75,215,148
