@@ -18,13 +18,13 @@ footer {
   /* TODO: CSS var / theme this*/
   color: white;
   .foot-logo {
-    background-image: url(/HCCS_ID_Knockout_Hi.png);
+    background-image: url(/hccs-white.png);
   }
 }
 .light footer {
   color: black;
   .foot-logo {
-    background-image: url(/HCCS_ID_Primary_Hi.png);
+    background-image: url(/hccs-green.png);
   }
 }
 .dark .slidev-layout {

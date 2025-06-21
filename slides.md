@@ -19,6 +19,19 @@ Ryan Williams
 
 Hudson County Complete Streets
 
+
+---
+---
+TODO:
+- Fix JFK; bus lane
+- Hudson County Bike Share Opportunity (300,000 rides/month)
+- Ward Tour
+- Ebikes
+- Viaduct
+- Ward Tour, capacity
+- Eli Bender
+- JSQ
+
 ---
 class: hccs
 dragPos:
@@ -51,6 +64,7 @@ dragPos:
 .dark .slidev-layout.hccs img { border: 1px solid white }
 .light .slidev-layout.hccs img { border: 3px solid #00793f }
 </style>
+
 
 # Hudson County Complete Streets
 > Our mission is to improve connectivity and transportation equity in Hudson County by advocating for safe streets, pedestrian and cycling infrastructure, and access to transit in each community.
@@ -247,16 +261,16 @@ scale: 0.8
 class: ctbk
 ---
 <style>
-.ctbk + footer { width: 50%; right: auto; }
+.ctbk + footer { display: none; }
 .slidev-layout.ctbk {
   padding: 2rem 1rem 0 2rem;
   p { margin-bottom: 0.5rem }
   li { line-height: 1.75rem }
   img:not(.right-overlay) {
-    height: 14.8rem;
+    /*height: 14.8rem;*/
     position: absolute;
     padding-left: 1rem;
-    bottom: 2%;
+    bottom: 1rem;
     z-index: 1;
   }
   .right-overlay {
@@ -266,21 +280,20 @@ class: ctbk
 }
 </style>
 
-# [ctbk.dev]
-Citi Bike dashboard
+# Hudson County – <br>Bike Share Opportunity
+- **10,000 trips per day** achievable in **5 years**
+  - Largely replacing car trips
+  - Cheaper, cleaner, quieter, safer mobility
+- Grove St (≈5 car-parking spots): **300 rides per day** 
+- JC+HOB: [63%][ebikes] ebike share, [78%][subs] annual members
 
-- Lyft [publishes][cb data] data monthly: [`s3://tripdata`]
-- Cleaned/Mirrored: [`s3://ctbk`], [&nbsp;<logos-github-icon color="white" />][ctbk gh]
-- 3.8MM rides/mo (86k/mo in JC+HOB)
-- [67%][ebikes] ebike share, [82%][subs] annual subscribers
-- Grove St (≈2 car-parking spots): 90-180 ride ends per day ([Feb '25][2502], [Oct '24][2410])
+[![](/g2505.png)][2505]
 
-[![](/g2410.png)][2410]
-
-<img v-click class="right-overlay" src="/cb-hc-opp.png" />
+<img v-click="[0,1]" class="right-overlay" src="/cb-opp2.png" />
 
 <!--
 Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
+Show station map by add date
 -->
 
 [ctbk.dev]: https://ctbk.dev
@@ -288,10 +301,9 @@ Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
 [`s3://tripdata`]: https://tripdata.s3.amazonaws.com/index.html
 [cb data]: https://www.citibikenyc.com/system-data
 [ctbk gh]: https://github.com/hudcostreets/ctbk.dev
-[2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
-[2502]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2502
-[subs]: https://ctbk.dev/?s=u&pct
-[ebikes]: https://ctbk.dev/?s=b&pct&rt=ce&d=2002-
+[2505]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2505
+[ebikes]: https://ctbk.dev/?s=b&pct&rt=ce&d=2002-&r=jh
+[subs]: https://ctbk.dev/?s=u&pct&r=jh
 
 ---
 layout: iframe-right
