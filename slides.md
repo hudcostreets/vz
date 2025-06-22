@@ -149,6 +149,34 @@ class: us
 <a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
 
 ---
+class: hudco
+dragPos:
+  homs: 20,262,483,_
+  modes: 607,18,356,_
+  intra: 513,354,369,_
+---
+
+<style>
+.hudco {
+}
+</style>
+# Hudson County – <br>Transportation Sector
+
+- 50-75% of the total vehicles come from multi-vehicle households.
+- <50% of trips are by car (only non-NYC US county)
+- **Car crashes kill more people than murders**
+
+<img v-drag="'homs'" src="/hc-vs-homs.png" />
+<img v-drag="'modes'" src="/njtpa-hc-modes.png" />
+<img v-drag="'intra'" src="/njtpa-intra-hc.png" />
+
+---
+---
+# Hudson County – Car Share Opportunity
+- ZipCar, Turo, GetAround
+- "Corner cars"
+
+---
 class: bike
 ---
 <style>
