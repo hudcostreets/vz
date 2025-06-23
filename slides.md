@@ -11,7 +11,7 @@ mdc: true
 layout: section
 ---
 
-# Toward Vision Zero in Hudson County
+# Toward Vision Zero<br>in Hudson County
 
 Hudson County Vision Zero Task Force meeting, 6/24/25
 
@@ -19,18 +19,55 @@ Ryan Williams
 
 Hudson County Complete Streets
 
+<!--
+[hudcostreets.org](https://hudcostreets.org)
+
+Slides: [vz.hccs.dev](https://vz.hccs.dev)
+-->
 
 ---
+class: quiz
+dragPos:
+  map: 535,0,445,_
 ---
-TODO:
-- Fix JFK; bus lane
-- Hudson County Bike Share Opportunity (300,000 rides/month)
-- Ward Tour
-- Ebikes
-- Viaduct
-- Ward Tour, capacity
-- Eli Bender
-- JSQ
+<style>
+.quiz {
+  .body {
+    width: 55%;
+  }
+  img { z-index: 1 !important; }
+  .credit {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2;
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.2rem 0.4rem;
+  }
+}
+</style>
+# Pop Quiz 💡
+
+<div class="body">
+
+What's the busiest hour of the year (most people carried) on:
+- JFK Boulevard
+- Rt 139
+
+<br/>
+<h1>🤔</h1>
+
+<div v-click>
+Keep scrolling for the answer…
+</div>
+
+</div>
+
+<img v-drag="'map'" src="/jp-jfk.jpg" />
+<div class="credit">
+Credit: @jerseyphotographer
+</div>
 
 ---
 class: hccs
@@ -102,79 +139,81 @@ Campaigns:
 [vzi]: https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/
 
 ---
-class: us
+class: vz
+dragPos:
+  plot: 15,236,353,_
+  map: 629,93,342,_
+  stats: 377,188,246,_
 ---
+
 <style>
-.slidev-layout.us {
-  padding-right: 5rem;
-  h2 {
-    margin-top: 1.7rem;
-    margin-bottom: 0.5rem;
+.vz {
+  h1 {
+    position: relative;
+    z-index: 10 
   }
-  .right-overlay {
-    padding: 2rem;
+  img {
+    z-index: 1 !important;
   }
-}</style>
+}
+</style>
 
-# Big picture – US transportation sector is broken
-≈100% car-dependence:
+# Status Quo – Deaths, Injuries, Property Damage
+50 crashes per day (reported to police). Annually (2020-2024):
+- 23 deaths: 9 pedestrians, 10 drivers, 2 passengers, 1-2 cyclists
+- 150 serious injuries, 1,000-4,000 other injuries
+- Car crashes kill more people than murders
 
-- [\$TNs][IMF] of subsidies, [\$TNs][debt] of auto debt, [\$TNs][insurance] of auto insurance (other people's crashes)
-- [MMs][deaths] of violent deaths, [10MMs][injuries] of injuries, [10MMs][disease] of respiratory diseases / cognitive impairments
-- [MMmts][CO2] of CO₂; pollution / particulates / noise
-- [Worse mobility][cn hsr], no childhood autonomy, hollowed-out cities, less community
-
-[IMF]: https://www.imf.org/en/Topics/climate-change/energy-subsidies
-[debt]: https://www.lendingtree.com/auto/debt-statistics/
-[insurance]: https://www.statista.com/outlook/fmo/insurances/non-life-insurances/motor-vehicle-insurance/united-states
-[deaths]: https://en.wikipedia.org/wiki/Motor_vehicle_fatality_rate_in_U.S._by_year#By_year
-[injuries]: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813560#:~:text=In%202022%20an%20estimated%202.38,injured%20from%202020%20to%202021.
-[disease]: https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/ambient-air-pollution
-[CO2]: https://www.eia.gov/tools/faqs/faq.php?id=307&t=10
-
-[shinkansen]: https://en.wikipedia.org/wiki/Shinkansen#Safety_record
-[cn hsr]: https://www.threads.net/@thetransitguy/post/DGY0GP6B3hD/video-this-is-the-beijing-shanghai-corridor-which-takes-4-hours-and-18-minutes-to-cove
-[world transit]: https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/
-[road deaths per capita]: https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html
-
-**Unprecedented, civilization-scale disaster**, entirely a policy choice. We have the technology to do better.
-
-## Theory of change
-- **Internet / Social Media**: shows people what's possible, enables organizing
-- **Data for decision-making**: proliferation of sensors/data and tools for analyzing/responding
-- **New technology**: ebikes/micromobility, faster/quieter transit, app-cars / AVs can reduce car dependence
-
-<a target="_blank" href="https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/"><img v-click class="right-overlay" src="/subway-countries.jpeg"/></a>
-
-<a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
+<img v-drag="'plot'" src="/hc-traffic-deaths.png" />
+<img v-drag="'stats'" src="/hc-crash-stats.png" />
+<img v-drag="'map'" src="/hc-crash-map.png" />
 
 ---
 class: hudco
 dragPos:
-  homs: 20,262,483,_
-  modes: 607,18,356,_
-  intra: 513,354,369,_
+  homs: 0,-102,0,0
+  modes: 0,-102,0,0
+  intra: 508,349,381,_
 ---
 
 <style>
 .hudco {
+  .left {
+    width: 60%;
+  }
 }
 </style>
+<div class="left">
+
 # Hudson County – <br>Transportation Sector
 
-- 50-75% of the total vehicles come from multi-vehicle households.
-- <50% of trips are by car (only non-NYC US county)
+<div>
+
+- **< 50% of trips by car** (only non-NYC US county)
+- **≈$2BN in auto debt**
 - **Car crashes kill more people than murders**
+- ["D" air quality rating][ALA]
 
 <img v-drag="'homs'" src="/hc-vs-homs.png" />
 <img v-drag="'modes'" src="/njtpa-hc-modes.png" />
-<img v-drag="'intra'" src="/njtpa-intra-hc.png" />
+
+</div>
+</div>
+
+[ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
 
 ---
+class: car-share
+dragPos:
+  intra: 508,349,381,_
 ---
 # Hudson County – Car Share Opportunity
+- 50-75% of vehicles belong to multi-vehicle households
+- 68% of trips are within Hudson County
 - ZipCar, Turo, GetAround
 - "Corner cars"
+
+<img v-drag="'intra'" src="/njtpa-intra-hc.png" />
 
 ---
 class: bike
@@ -614,3 +653,67 @@ class: end
 We're hiring: [hudcostreets.org/careers].
 
 [hudcostreets.org/careers]: https://hudcostreets.org/careers
+
+---
+class: us
+---
+<style>
+.slidev-layout.us {
+  padding-right: 5rem;
+  h2 {
+    margin-top: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .right-overlay {
+    padding: 2rem;
+  }
+}</style>
+
+# Big picture – US transportation sector is broken
+≈100% car-dependence:
+
+- [\$TNs][IMF] of subsidies, [\$TNs][debt] of auto debt, [\$TNs][insurance] of auto insurance (other people's crashes)
+- [MMs][deaths] of violent deaths, [10MMs][injuries] of injuries, [10MMs][disease] of respiratory diseases / cognitive impairments
+- [MMmts][CO2] of CO₂; pollution / particulates / noise
+- [Worse mobility][cn hsr], no childhood autonomy, hollowed-out cities, less community
+
+[IMF]: https://www.imf.org/en/Topics/climate-change/energy-subsidies
+[debt]: https://www.lendingtree.com/auto/debt-statistics/
+[insurance]: https://www.statista.com/outlook/fmo/insurances/non-life-insurances/motor-vehicle-insurance/united-states
+[deaths]: https://en.wikipedia.org/wiki/Motor_vehicle_fatality_rate_in_U.S._by_year#By_year
+[injuries]: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813560#:~:text=In%202022%20an%20estimated%202.38,injured%20from%202020%20to%202021.
+[disease]: https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/ambient-air-pollution
+[CO2]: https://www.eia.gov/tools/faqs/faq.php?id=307&t=10
+
+[shinkansen]: https://en.wikipedia.org/wiki/Shinkansen#Safety_record
+[cn hsr]: https://www.threads.net/@thetransitguy/post/DGY0GP6B3hD/video-this-is-the-beijing-shanghai-corridor-which-takes-4-hours-and-18-minutes-to-cove
+[world transit]: https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/
+[road deaths per capita]: https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html
+
+**Unprecedented, civilization-scale disaster**, entirely a policy choice. We have the technology to do better.
+
+## Theory of change
+- **Internet / Social Media**: shows people what's possible, enables organizing
+- **Data for decision-making**: proliferation of sensors/data and tools for analyzing/responding
+- **New technology**: ebikes/micromobility, faster/quieter transit, app-cars / AVs can reduce car dependence
+
+<a target="_blank" href="https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/"><img v-click class="right-overlay" src="/subway-countries.jpeg"/></a>
+
+<a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
+
+---
+---
+
+TODO:
+- Fix JFK; bus lane
+- Hudson County Bike Share Opportunity (300,000 rides/month)
+- Ward Tour
+- Ebikes
+- Viaduct
+- Ward Tour, capacity
+- Eli Bender
+- TurnpikeTrap
+- JSQ
+
+- update hccs intro slide, campaigns
+- glowy crash map 2022 update
