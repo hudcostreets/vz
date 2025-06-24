@@ -234,7 +234,7 @@ dragPos:
 </style>
 
 # Cost of car-dependence
-277k cars in Hudson County
+277k cars in Hudson County:
 <div class="left">
 
 - **≈$3BN / year** buying, insuring, maintaining
@@ -253,7 +253,7 @@ People need (and want) transportation alternatives…
 <div v-click>
 <br/>
 
-- "D" air quality grade…
+"D" air quality grade…
 </div>
 
 <img v-drag="'cars'" src="/hc_vehs_title.png" />
@@ -263,7 +263,7 @@ People need (and want) transportation alternatives…
 ---
 class: quiz-a
 dragPos:
-  wt: 342,185,321,_
+  wt: 366,211,297,_
 ---
 
 <style>
@@ -285,7 +285,7 @@ dragPos:
     height: 100%;
   }
   .left {
-    width: 33%;
+    width: 36%;
     &.inner > ul > li { list-style: none; }
   }
 }
@@ -302,8 +302,12 @@ dragPos:
 <div v-click="1">
 
 ### **A:** Jersey City Ward Tour
+<div class="left">
+
 - 2,000 cyclists
-- Rolling closures: **5-30 minutes**
+  - Rolling closures: **5-30 minutes**
+  - JFK: 25,000 vehicles per day, ≤2,000 per hour
+</div>
 
 <video class="wt" src="/wt.mp4" onclick="this.ended ? (this.currentTime = 0, this.play()) : this.paused ? this.play() : this.pause()" />
 </div>
@@ -424,44 +428,9 @@ dragPos:
 <img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
 </div>
 
----
-class: bike
----
-<style>
-.bike + footer { display: none; }
-.slidev-layout.bike {
-  padding: 2rem 1rem 0 2rem;
-  p { margin-bottom: 0.5rem }
-  li { line-height: 1.75rem }
-  img:not(.right-overlay) {
-    /*height: 14.8rem;*/
-    position: absolute;
-    padding-left: 1rem;
-    bottom: 1rem;
-    z-index: 1;
-  }
-  video.wt {
-    border: 1rem solid #00793f;
-    border-left: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-  }
-}
-</style>
-# Hudson County – <br>Bike Mode Share Opportunity
-- Jersey City Ward Tour: 2,000+ bikes, 5-20 minutes
-  Busiest hour of the year on JFK, 139, Palisade, etc.
-  - JFK: 25,000 vehicles per day, ≤2,000 per hour
-- Most children are capable of biking from Bayonne to Hoboken, and back
-  - Letting kids bike safely = reduce traffic, fix school drop-off, restore autonomy (to parents too)
-  - Bike buses
-  - Safe routes to school
-
+<!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFg5PRpeLzs?t=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<video class="wt" src="/wt.mp4" autoplay></video>
+-->
 
 ---
 layout: iframe-right
@@ -476,7 +445,7 @@ class: ctbk
   p { margin-bottom: 0.5rem }
   li { line-height: 1.75rem }
   img:not(.right-overlay) {
-    /*height: 14.8rem;*/
+    height: 14.8rem;
     position: absolute;
     padding-left: 1rem;
     bottom: 1rem;
