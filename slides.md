@@ -686,6 +686,10 @@ dragPos:
 
 ---
 class: pbls
+dragPos:
+  guy: 500,36,383,_
+  vd0: 32,126,441,_
+  vd1: 32,336,441,_
 ---
 
 <style>
@@ -710,11 +714,13 @@ class: pbls
 # Bike infrastructure
 [Viaduct multi-use path][vd]!
 
-![](/vd0.png)
-
-![](/vd1.png)
-
 <video src="/viaduct.mov" controls loop muted />
+
+<img v-drag="'vd0'" src="/vd0.png" />
+<img v-drag="'vd1'" src="/vd1.png" />
+<div v-click>
+<img v-drag="'guy'" src="/vd-pr.png" />
+</div>
 
 [vd]: https://www.hcnj.us/blog/2025/05/22/15886/
 
@@ -782,3 +788,4 @@ TODO:
 - Specify HC in homs plot
   - Add statewide click
 - Link "deaths" plots
+- more cargobike photos
