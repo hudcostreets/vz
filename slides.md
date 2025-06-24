@@ -60,7 +60,7 @@ What's the busiest hour of the year (most people carried) on:
 <h1>🤔</h1>
 
 <div v-click>
-Answer is a few slides ahead…
+Answer in a few slides…
 </div>
 
 </div>
@@ -154,6 +154,11 @@ Campaigns:
 [vzi]: https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/
 
 ---
+layout: section
+---
+# Status Quo
+
+---
 class: deaths
 dragPos:
   plot: 20,218,370,_
@@ -187,6 +192,14 @@ dragPos:
 
 # Status Quo – Deaths, Injuries, Property Damage
 
+Car crashes kill more people **than murders**
+
+<img v-drag="'homs'" src="/hc-vs-homs.png" />
+</div>
+<div v-click>
+
+# Status Quo – Deaths, Injuries, Property Damage
+
 - 50 crashes per day (reported to police).
 - Per year:
   - 23 deaths (9 pedestrians, 10 drivers, 2 passengers, 1-2 cyclists)
@@ -197,17 +210,75 @@ dragPos:
 <img v-drag="'map'" src="/hc-crash-map.png" />
 
 </div>
-<div v-click>
 
-# Status Quo – Deaths, Injuries, Property Damage
-
-Car crashes kill more people **than murders**
-
-<img v-drag="'homs'" src="/hc-vs-homs.png" />
-</div>
 <div class="link">
 
 [crashes.hudcostreets.org](https://crashes.hudcostreets.org)
+</div>
+
+---
+class: cars
+dragPos:
+  cars: 405,38,565,_
+  mode: 54,173,889,_
+  intra: 52,281,629,_
+---
+
+<style>
+.cars+footer { display: none; }
+.cars {
+  .slidev-vclick-hidden { display: none; }
+  padding-left: 2rem;
+  .left {
+    width: 42%;
+  }
+}
+</style>
+<div v-click="[0,1]">
+
+# Cost of car ownership
+277k cars in Hudson County
+<div class="left">
+
+- **≈$3BN / year** buying, insuring, maintaining
+- **≈$2BN auto debt** ($1TN nation-wide)
+- **10% increase** since COVID ‼️
+  - Traffic and parking will only get worse, if number of cars keeps rising
+  - People need (and want) transportation alternatives
+
+</div>
+</div>
+<div v-click="[0,2]">
+<img v-drag="'cars'" src="/hc_vehs_title.png" />
+</div>
+
+<div v-click="1">
+
+# Opportunities
+- 30% of cars are households' 2nd (or more)
+  - Car-sharing
+  - Replacing with (e)bikes, scooters
+</div>
+<div v-click="[2,3]">
+<img v-drag="'cars'" src="/hc_vehs_years_title.png" />
+</div>
+<div v-click="2">
+
+- 33% of households already car-free
+</div>
+<div v-click="[3,4]">
+<img v-drag="'mode'" src="/njtpa-hc-modes.png" />
+</div>
+<div v-click="3">
+
+- < 50% of trips by car
+</div>
+<div v-click="4">
+
+- 68% of trips are within Hudson County
+</div>
+<div v-click="4">
+<img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
 </div>
 
 ---
@@ -222,7 +293,7 @@ dragPos:
 .mode+footer { display: none; }
 </style>
 
-# Status Quo – < 50% of trips by car
+# Hudson County – < 50% of trips by car
 
 (only non-NYC US county)
 
@@ -235,6 +306,7 @@ class: car-share
 dragPos:
   intra: 508,349,381,_
 ---
+
 # Hudson County – Car Share Opportunity
 - 50-75% of vehicles belong to multi-vehicle households
 - 68% of trips are within Hudson County
@@ -385,6 +457,7 @@ dragPos:
 -->
 
 <a href="https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2023%20Hub%20Bound/2023%20Hub%20Bound%20Report-%203.18.25.pdf?ver=7S_sDok5O_aw9bEN3A-NjA%3d%3d" target="_blank"><img v-drag="'nymtc'" src="/nymtc-hbt.png"/></a>
+
 <!--
 <img v-drag="'nymtc'" src="/nymtc-hbt.png"/>
 -->
@@ -745,3 +818,4 @@ TODO:
 
 - update hccs intro slide, campaigns
 - glowy crash map 2022 update
+- Specify HC in homs plot
