@@ -340,36 +340,33 @@ class: opps-section
 <img src="/mode-capacities.png" />
 
 ---
-# layout: two-cols
 class: nymtc
 dragPos:
-  xbl: 40,138,515,_
-  nymtc: 567,135,310,_
+  xbl: 300,20,665,_
+  nymtc: 40,135,310,_
 ---
 
 <style>
-.slidev-layout.nymtc {
-  display: grid;
-  padding: 1.5rem 2.5rem 2rem 2.5rem;
-  grid-template-columns: 57% 40%;
-  gap: 1rem;
-  font-size: 1rem;
-  .col-right { padding-top: 1rem }
+.nymtc {
+  &+footer { display: none; }
+  .col-left { width: 25%; }
 }
 </style>
-
 <div class="col-left">
-  <h1>BRT / <a href="https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html" target="_blank">Lincoln Tunnel Bus Lane</a></h1>
+
+## [Lincoln Tunnel Bus Lane](https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html)
+
+<br/>
 
 > … busiest and most productive highway lane in the nation, moving over 1,850 buses and 70,000 passengers each weekday morning &nbsp;[<mdi-link />][xbl faq]
-</div>
-<div class="col-right">
-  <h4>
-    <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Transportation-Data-and-Statistics/Publications/Hub-Bound-Travel" target="_blank">
-      NYMTC "Hub-Bound Travel" reports
-    </a>
-  </h4>
-  <p>Annual study of modes / vehicles in/out of Manhattan CBD</p>
+
+1 bus lane moves **5x** as many people per hour…
+
+as 5 car lanes (Lincoln+Holland) _combined_ 🤯.
+
+95% of Holland Tunnel vehicles are cars
+
+80% have 1 person
 </div>
 
 [xbl]: https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html
@@ -378,12 +375,6 @@ dragPos:
 <a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
 <!--
 <img v-drag="'xbl'" src="/xbl.png"/>
--->
-
-<a href="https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2023%20Hub%20Bound/2023%20Hub%20Bound%20Report-%203.18.25.pdf?ver=7S_sDok5O_aw9bEN3A-NjA%3d%3d" target="_blank"><img v-drag="'nymtc'" src="/nymtc-hbt.png"/></a>
-
-<!--
-<img v-drag="'nymtc'" src="/nymtc-hbt.png"/>
 -->
 
 ---
