@@ -54,7 +54,7 @@ dragPos:
 
 <div class="body">
 
-#### **Q:** What's the busiest hour of the year (most people carried) on:
+### **Q:** What's the busiest hour of the year on:
 - JFK Boulevard
 - Rt 139
 
@@ -219,7 +219,7 @@ Car crashes kill more people **than murders**
 ---
 class: cars
 dragPos:
-  cars: 410,38,560,_
+  cars: 415,88,555,_
 ---
 
 <style>
@@ -233,7 +233,7 @@ dragPos:
 }
 </style>
 
-# Cost of car ownership
+# Cost of car-dependence
 277k cars in Hudson County
 <div class="left">
 
@@ -250,12 +250,15 @@ Traffic and parking will only get worse, if the number of cars keeps rising.
 People need (and want) transportation alternatives…
 </div>
 </div>
+<div v-click>
+<br/>
+
+- "D" air quality grade…
+</div>
+
 <img v-drag="'cars'" src="/hc_vehs_title.png" />
 
----
-layout: section
----
-# Opportunities
+[ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
 
 ---
 class: quiz-a
@@ -268,6 +271,10 @@ dragPos:
   &+footer { display: none; }
   .body {
     width: 75%;
+    margin-bottom: .5rem;
+  }
+  & > div:nth-child(2) {
+    margin-top: 0;
   }
   video.wt {
     border: 1rem solid #00793f;
@@ -277,22 +284,26 @@ dragPos:
     bottom: 0;
     height: 100%;
   }
+  .left {
+    width: 33%;
+    &.inner > ul > li { list-style: none; }
+  }
 }
 </style>
-# Pop Quiz 💡
+# Pop Quiz (cont.)
 
 <div class="body">
 
-#### **Q:** What's the busiest hour of the year (most people carried) on:
+### **Q:** What's the busiest hour of the year on:
 - JFK Boulevard
 - Rt 139
 
-<br/>
 </div>
 <div v-click="1">
 
 ### **A:** Jersey City Ward Tour
-- 2,000 cyclists, 5-30 minutes
+- 2,000 cyclists
+- Rolling closures: **5-30 minutes**
 
 <video class="wt" src="/wt.mp4" onclick="this.ended ? (this.currentTime = 0, this.play()) : this.paused ? this.play() : this.pause()" />
 </div>
@@ -302,6 +313,31 @@ dragPos:
 
 <img v-drag="'wt'" src="/wt.png" />
 </div>
+<div v-click="3" class="left">
+
+- Children can bike from downtown, to Greenville, to West Side, to Heights, and back.
+</div>
+<div v-click="4" class="left inner">
+<ul><li><ul><li>When we make it safe (no cars)</li></ul></li></ul>
+</div>
+
+---
+layout: section
+class: opps-section
+---
+
+<style>
+.opps-section {
+  &+footer { display: none; }
+  img {
+    display: inline;
+    width: 70%;
+  }
+}
+</style>
+# Opportunities
+
+<img src="/mode-capacities.png" />
 
 ---
 class: opps
@@ -326,13 +362,16 @@ dragPos:
   - Car-sharing
   - Replacing with (e)bikes, scooters
 <div v-click="[0,1]">
+<img v-drag="'cars'" src="/hc_vehs_title.png" />
+</div>
+<div v-click="[1,2]">
 <img v-drag="'cars'" src="/hc_vehs_years_title.png" />
 </div>
 <div v-click="1">
 
 - 33% of households already car-free
 </div>
-<div v-click="[1,2]">
+<div v-click="[2,3]">
 <img v-drag="'mode'" src="/njtpa-hc-modes.png" />
 </div>
 <div v-click="2">
@@ -346,8 +385,6 @@ dragPos:
 <div v-click="3">
 <img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
 </div>
-
-[ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
 
 ---
 class: bike
@@ -854,3 +891,4 @@ TODO:
 - Specify HC in homs plot
   - Add statewide click
 - Link "deaths" plots
+- WT kids
