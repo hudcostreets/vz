@@ -472,67 +472,6 @@ class: bike
 
 <video class="wt" src="/wt.mp4" autoplay></video>
 
-
----
-class: plots
-dragPos:
-  hom: 16,75,215,148
-  sp: 16,234,215,148
-  path: 16,393,215,147
-  jc: 241,73,185,242
-  hc: 241,325,185,216
-  xbl: 436,21,331,267
-  cb-m: 436,298,331,242
-  cb: 777,20,192,124
-  cb-r: 777,154,192,120
-  cb-g: 777,286,192,120
-  cb-u: 777,418,192,120
----
-
-<style>
-.slidev-layout.plots {
-  & + footer { display: none }
-  padding-top: 1.6rem;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>
-
-<!--
-<div v-drag="'hom'"><img src="/hom.png"/></div>
-<div v-drag="'sp'"><img src="/njsp.png"/></div>
-<div v-drag="'path'"><img src="/path-vs19.png"/></div>
-<div v-drag="'jc'"><img src="/jc.gif" /></div>
-<div v-drag="'hc'"><img src="/hc-map.png"/></div>
-<div v-drag="'xbl'"><img src="/xbl.png"/></div>
-<div v-drag="'cb-m'"><img src="/g2410.png"/></div>
-<div v-drag="'cb'"><img src="/cb.png"/></div>
-<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
-<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
-<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
--->
-
-<div v-drag="'hom'" ><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img src="/hom.png"/></a></div>
-<div v-drag="'sp'"  ><a target="_blank" href="https://crashes.hudcostreets.org/#per-year"><img src="/njsp.png"/></a></div>
-<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png"/></a></div>
-<div v-drag="'jc'"  ><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" /></a></div>
-<div v-drag="'hc'"  ><a target="_blank" href="https://crashes.hudcostreets.org/map/hudson"><img src="/hc-map.png"/></a></div>
-<div v-drag="'xbl'" ><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png"/></a></div>
-<div v-drag="'cb-m'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png"/></a></div>
-<div v-drag="'cb'"  ><a target="_blank" href="https://ctbk.dev/"><img src="/cb.png"/></a></div>
-<div v-drag="'cb-r'"><a target="_blank" href="https://ctbk.dev/?s=b&pct&rt=ce&d=2002-"><img src="/cb-r.png"/></a></div>
-<div v-drag="'cb-g'"><a target="_blank" href="https://ctbk.dev/?y=m&s=g&pct&g=mf&d=1406-2102"><img src="/cb-g.png"/></a></div>
-<div v-drag="'cb-u'"><a target="_blank" href="https://ctbk.dev/?s=u&pct"><img src="/cb-u.png"/></a></div>
-
-# Proving it, locally
-
-[hom-cmp]: https://crashes.hudcostreets.org/#vs-homicides
-[xbl]: https://github.com/hudcostreets/hudson-transit
-[grove-2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
-[path]: https://path.hudcostreets.org/#vs-2019
-
 ---
 layout: iframe-right
 url: https://ctbk.dev
@@ -650,73 +589,72 @@ class: hob
 [ord]:https://www.hobokennj.gov/resources/commercial-e-delivery-operators
 
 ---
-class: srcs
----
-# Data sources
-
-<div style="font-size:0.5em">&nbsp;</div>
-
-| Agency      | Data                               | Frequency                   | Delay       | Mirror / Site                                                                                                                |
-|-------------|------------------------------------|-----------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------|
-| [NJSP]      | Crashes (fatal)                    | Daily                       | 1d – 3mos   | [<logos-github-icon/>][hudcostreets/nj-crashes] [<logos-aws-s3 />][`s3://nj-crashes/njsp`] &nbsp;[crashes.hudcostreets.org]  |
-| [NJ DOT]    | Crashes (all)                      | Annually                    | 2-3yrs ('22) | [<logos-github-icon/>][hudcostreets/nj-crashes] [<logos-aws-s3 />][`s3://nj-crashes/njdot`] &nbsp;[crashes.hudcostreets.org] |
-| [Lyft]      | Citi Bike ridership                | Monthly                     | ≈1wk        | [<logos-github-icon/>][hudcostreets/ctbk.dev] [<logos-aws-s3 />][`s3://ctbk`]                &nbsp;[ctbk.dev]                |
-| [PANYNJ]    | PATH Ridership                     | Monthly                     | 1-2mos      | [<logos-github-icon/>][hudcostreets/path]                                                    &nbsp;[path.hudcostreets.org]   |
-| [NYMTC]     | Hudson River crossings             | Annually                    | 1-2yrs ('23) | [<logos-github-icon/>][hudcostreets/hudson-transit] [<logos-google-drive />][HCCS NYMTC]                                     |
-| NJ Transit  | Rides per station/line             | OPRA                        | -           | [<logos-google-drive />][HCCS NJT]                                                                                           |
-| NJ Turnpike | Exits x Veh types                  | OPRA                        | -           | [<logos-google-drive />][HCCS NJTA]                                                                                          |
-| [Lyft]      | [Citi Bike system status][cb gbfs] | Realtime ([GBFS]) | 1min | -                                                                                                                            |
-| PANYNJ      | [PATH real-time status][path realtime] | Realtime ([GTFS]) | 1min | [<logos-github-icon/>][mrazza/path-data] &nbsp;[<logos-github-icon/>][jamespfennell/path-train-gtfs-realtime]                |
-
-[ctbk.dev]: https://ctbk.dev
-[crashes.hudcostreets.org]: https://crashes.hudcostreets.org
-[path.hudcostreets.org]: https://path.hudcostreets.org
-[hudcostreets/hudson-transit]: https://github.com/hudcostreets/hudson-transit
-
-[NJSP]: https://www.nj.gov/njsp/info/fatalacc/index.shtml
-[NJ DOT]: https://www.nj.gov/transportation/refdata/accident/rawdata01-current.shtm
-[PANYNJ]: https://www.panynj.gov/path/en/about/stats.html
-[NYMTC]: https://www.nymtc.org/en-us/Data-and-Modeling/Transportation-Data-and-Statistics/Publications/Hub-Bound-Travel
-[Lyft]: https://citibikenyc.com/system-data
-
-[`s3://nj-crashes/njsp`]: https://nj-crashes.s3.amazonaws.com/index.html#/njsp/data
-[`s3://nj-crashes/njdot`]: https://nj-crashes.s3.amazonaws.com/index.html#/njdot/data
-[hudcostreets/path]: https://github.com/hudcostreets/path
-[hudcostreets/nj-crashes]: https://github.com/hudcostreets/nj-crashes
-[hudcostreets/ctbk.dev]: https://github.com/hudcostreets/ctbk.dev
-[HCCS NYMTC]: https://drive.google.com/drive/folders/1Dm-ZBYxWaOaGgm08XCGOZCuvU2IQaPLN
-[HCCS NJTA]: https://drive.google.com/drive/folders/1Ff4TUP6MmuoGvE0qTE2cgBukoxstB-93
-[HCCS NJT]: https://drive.google.com/drive/folders/1IkeX8EOavWC1uUa1eHIIbVmE8i5tDuwE
-[`s3://ctbk`]: https://ctbk.s3.amazonaws.com/index.html
-
-[GBFS]: https://github.com/MobilityData/gbfs
-[cb gbfs]: https://gbfs.citibikenyc.com/gbfs/2.3/gbfs.json
-[cb gbfs stations]: https://gbfs.lyft.com/gbfs/2.3/bkn/en/station_information.json
-[cb gbfs status]: https://gbfs.lyft.com/gbfs/2.3/bkn/en/station_status.json
-[GTFS]: https://gtfs.org/
-
-[path grpc]: https://github.com/mrazza/path-data
-[path grpc blog]: https://medium.com/@mrazza/programmatic-path-real-time-arrival-data-5d0884ae1ad6
-[path gtfs]: https://github.com/jamespfennell/path-train-gtfs-realtime
-[path realtime]: https://www.panynj.gov/path/en/index.html
-
-[mrazza/path-data]: https://github.com/mrazza/path-data
-[jamespfennell/path-train-gtfs-realtime]: https://github.com/jamespfennell/path-train-gtfs-realtime
-
----
-layout: iframe-right
-url: https://hudcostreets.org/careers
+layout: section
 class: end
 ---
-<style>
-.end + footer { width: 50%; right: auto; }
-</style>
 
 # Thank you!
 
-We're hiring: [hudcostreets.org/careers].
 
-[hudcostreets.org/careers]: https://hudcostreets.org/careers
+---
+class: plots
+dragPos:
+  hom: 16,75,215,148
+  sp: 16,234,215,148
+  path: 16,393,215,147
+  jc: 241,73,185,242
+  hc: 241,325,185,216
+  xbl: 436,21,331,267
+  cb-m: 436,298,331,242
+  cb: 777,20,192,124
+  cb-r: 777,154,192,120
+  cb-g: 777,286,192,120
+  cb-u: 777,418,192,120
+---
+
+<style>
+.slidev-layout.plots {
+  & + footer { display: none }
+  padding-top: 1.6rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+
+<!--
+<div v-drag="'hom'"><img src="/hom.png"/></div>
+<div v-drag="'sp'"><img src="/njsp.png"/></div>
+<div v-drag="'path'"><img src="/path-vs19.png"/></div>
+<div v-drag="'jc'"><img src="/jc.gif" /></div>
+<div v-drag="'hc'"><img src="/hc-map.png"/></div>
+<div v-drag="'xbl'"><img src="/xbl.png"/></div>
+<div v-drag="'cb-m'"><img src="/g2410.png"/></div>
+<div v-drag="'cb'"><img src="/cb.png"/></div>
+<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
+<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
+<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
+-->
+
+<div v-drag="'hom'" ><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img src="/hom.png"/></a></div>
+<div v-drag="'sp'"  ><a target="_blank" href="https://crashes.hudcostreets.org/#per-year"><img src="/njsp.png"/></a></div>
+<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png"/></a></div>
+<div v-drag="'jc'"  ><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" /></a></div>
+<div v-drag="'hc'"  ><a target="_blank" href="https://crashes.hudcostreets.org/map/hudson"><img src="/hc-map.png"/></a></div>
+<div v-drag="'xbl'" ><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png"/></a></div>
+<div v-drag="'cb-m'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png"/></a></div>
+<div v-drag="'cb'"  ><a target="_blank" href="https://ctbk.dev/"><img src="/cb.png"/></a></div>
+<div v-drag="'cb-r'"><a target="_blank" href="https://ctbk.dev/?s=b&pct&rt=ce&d=2002-"><img src="/cb-r.png"/></a></div>
+<div v-drag="'cb-g'"><a target="_blank" href="https://ctbk.dev/?y=m&s=g&pct&g=mf&d=1406-2102"><img src="/cb-g.png"/></a></div>
+<div v-drag="'cb-u'"><a target="_blank" href="https://ctbk.dev/?s=u&pct"><img src="/cb-u.png"/></a></div>
+
+# Proving it, locally
+
+[hom-cmp]: https://crashes.hudcostreets.org/#vs-homicides
+[xbl]: https://github.com/hudcostreets/hudson-transit
+[grove-2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
+[path]: https://path.hudcostreets.org/#vs-2019
 
 ---
 class: us
