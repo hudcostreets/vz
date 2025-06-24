@@ -288,7 +288,7 @@ dragPos:
 <img v-drag="'mode'" src="/njtpa-hc-modes.png" />
 </div>
 
-- < 50% of trips by car
+- < 50% of trips by car, today
 <div v-click="[1,2]">
 <img v-drag="'cars'" src="/hc_vehs_years_title.png" />
 </div>
@@ -310,6 +310,113 @@ dragPos:
 <div v-click="3">
 <img v-drag="'weather'" src="/hc-weather.png" />
 <img v-drag="'bike'" src="/hc-bike-len.png" />
+</div>
+
+---
+class: xbl
+dragPos:
+  xbl: 300,20,665,_
+---
+
+<style>
+.xbl {
+  &+footer { display: none; }
+  .col-left { width: 25%; }
+}
+</style>
+<div class="col-left">
+
+## [Lincoln Tunnel Bus Lane](https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html)
+
+<br/>
+
+> … busiest and most productive highway lane in the nation, moving over 1,850 buses and 70,000 passengers each weekday morning &nbsp;[<mdi-link />][xbl faq]
+
+1 bus lane moves **5x** as many people per hour…
+
+as 5 car lanes (Lincoln+Holland) _combined_ 🤯.
+
+95% of Holland Tunnel vehicles are cars
+
+80% have 1 person
+</div>
+
+[xbl]: https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html
+[xbl faq]: https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html
+
+<a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
+
+<!--
+<img v-drag="'xbl'" src="/xbl.png"/>
+-->
+
+---
+class: quiz-a
+dragPos:
+  wt: 366,211,297,_
+  bb1: 196,17,385,_
+  bb2: 580,16,392,_
+---
+
+<style>
+.quiz-a {
+  &+footer { display: none; }
+  .body {
+    width: 75%;
+    margin-bottom: .5rem;
+  }
+  & > div:nth-child(2) {
+    margin-top: 0;
+  }
+  video.wt {
+    border: 1rem solid #00793f;
+    border-left: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .left {
+    width: 36%;
+    &.inner > ul > li { list-style: none; }
+  }
+}
+</style>
+# Pop Quiz (cont.)
+
+<div class="body">
+
+### **Q:** What's the busiest hour of the year on:
+- JFK Boulevard
+- Rt 139
+
+</div>
+<div v-click="1">
+
+### **A:** Jersey City Ward Tour
+<div class="left">
+
+- 2,000 cyclists
+  - Rolling closures: **5-30 minutes**
+  - JFK: 25,000 vehicles per day, ≤2,000 per hour
+</div>
+
+<video class="wt" src="/wt.mp4" onclick="this.ended ? (this.currentTime = 0, this.play()) : this.paused ? this.play() : this.pause()" />
+</div>
+<div v-click="2">
+
+- 16 miles, 6 wards
+
+<img v-drag="'wt'" src="/wt.png" />
+</div>
+<div v-click="3" class="left">
+<img v-drag="'bb2'" src="/bike-bus2.jpeg" />
+<img v-drag="'bb1'" src="/bike-bus1.jpeg" />
+
+- Children can bike from downtown, to Greenville, to West Side, to Heights, and back.
+</div>
+<div v-click="4" class="left inner">
+<ul><li><ul><li>When we make it safe (no cars)</li></ul></li></ul>
 </div>
 
 ---
@@ -421,75 +528,6 @@ People need (and want) transportation alternatives…
 [ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
 
 ---
-class: quiz-a
-dragPos:
-  wt: 366,211,297,_
-  bb1: 196,17,385,_
-  bb2: 580,16,392,_
----
-
-<style>
-.quiz-a {
-  &+footer { display: none; }
-  .body {
-    width: 75%;
-    margin-bottom: .5rem;
-  }
-  & > div:nth-child(2) {
-    margin-top: 0;
-  }
-  video.wt {
-    border: 1rem solid #00793f;
-    border-left: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-  }
-  .left {
-    width: 36%;
-    &.inner > ul > li { list-style: none; }
-  }
-}
-</style>
-# Pop Quiz (cont.)
-
-<div class="body">
-
-### **Q:** What's the busiest hour of the year on:
-- JFK Boulevard
-- Rt 139
-
-</div>
-<div v-click="1">
-
-### **A:** Jersey City Ward Tour
-<div class="left">
-
-- 2,000 cyclists
-  - Rolling closures: **5-30 minutes**
-  - JFK: 25,000 vehicles per day, ≤2,000 per hour
-</div>
-
-<video class="wt" src="/wt.mp4" onclick="this.ended ? (this.currentTime = 0, this.play()) : this.paused ? this.play() : this.pause()" />
-</div>
-<div v-click="2">
-
-- 16 miles, 6 wards
-
-<img v-drag="'wt'" src="/wt.png" />
-</div>
-<div v-click="3" class="left">
-<img v-drag="'bb2'" src="/bike-bus2.jpeg" />
-<img v-drag="'bb1'" src="/bike-bus1.jpeg" />
-
-- Children can bike from downtown, to Greenville, to West Side, to Heights, and back.
-</div>
-<div v-click="4" class="left inner">
-<ul><li><ul><li>When we make it safe (no cars)</li></ul></li></ul>
-</div>
-
----
 layout: section
 class: opps-section
 ---
@@ -506,45 +544,6 @@ class: opps-section
 # Opportunities
 
 <img src="/mode-capacities.png" />
-
----
-class: nymtc
-dragPos:
-  xbl: 300,20,665,_
-  nymtc: 40,135,310,_
----
-
-<style>
-.nymtc {
-  &+footer { display: none; }
-  .col-left { width: 25%; }
-}
-</style>
-<div class="col-left">
-
-## [Lincoln Tunnel Bus Lane](https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html)
-
-<br/>
-
-> … busiest and most productive highway lane in the nation, moving over 1,850 buses and 70,000 passengers each weekday morning &nbsp;[<mdi-link />][xbl faq]
-
-1 bus lane moves **5x** as many people per hour…
-
-as 5 car lanes (Lincoln+Holland) _combined_ 🤯.
-
-95% of Holland Tunnel vehicles are cars
-
-80% have 1 person
-</div>
-
-[xbl]: https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html
-[xbl faq]: https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html
-
-<a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
-
-<!--
-<img v-drag="'xbl'" src="/xbl.png"/>
--->
 
 ---
 class: opps
