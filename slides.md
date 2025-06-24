@@ -172,7 +172,8 @@ dragPos:
 <style>
 .slidev-layout.plots {
   & + footer { display: none }
-  padding-top: 1.6rem;
+  padding-top: 1.3rem;
+  padding-left: 1.2rem;
   img {
     width: 100%;
     height: 100%;
@@ -206,13 +207,63 @@ dragPos:
 <div v-drag="'cb-g'"><a target="_blank" href="https://ctbk.dev/?y=m&s=g&pct&g=mf&d=1406-2102"><img src="/cb-g.png"/></a></div>
 <div v-drag="'cb-u'"><a target="_blank" href="https://ctbk.dev/?s=u&pct"><img src="/cb-u.png"/></a></div>
 
-# Proving it, locally
+## Transportation data projects
 
 [hom-cmp]: https://crashes.hudcostreets.org/#vs-homicides
 [xbl]: https://github.com/hudcostreets/hudson-transit
 [grove-2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
 [path]: https://path.hudcostreets.org/#vs-2019
 
+---
+class: us
+---
+<style>
+.slidev-layout.us {
+  padding-right: 5rem;
+  h2 {
+    margin-top: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .right-overlay {
+    padding: 2rem;
+  }
+}</style>
+
+# Big picture – US transportation sector is broken
+≈100% car-dependence:
+
+- [\$TNs][IMF] of subsidies, [\$TNs][debt] of auto debt, [\$TNs][insurance] of auto insurance (other people's crashes)
+- [MMs][deaths] of violent deaths, [10MMs][injuries] of injuries, [10MMs][disease] of respiratory diseases / cognitive impairments
+- [MMmts][CO2] of CO₂; pollution / particulates / noise
+- [Worse mobility][cn hsr], no childhood autonomy, hollowed-out cities, less community
+
+[IMF]: https://www.imf.org/en/Topics/climate-change/energy-subsidies
+[debt]: https://www.lendingtree.com/auto/debt-statistics/
+[insurance]: https://www.statista.com/outlook/fmo/insurances/non-life-insurances/motor-vehicle-insurance/united-states
+[deaths]: https://en.wikipedia.org/wiki/Motor_vehicle_fatality_rate_in_U.S._by_year#By_year
+[injuries]: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813560#:~:text=In%202022%20an%20estimated%202.38,injured%20from%202020%20to%202021.
+[disease]: https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/ambient-air-pollution
+[CO2]: https://www.eia.gov/tools/faqs/faq.php?id=307&t=10
+
+[shinkansen]: https://en.wikipedia.org/wiki/Shinkansen#Safety_record
+[cn hsr]: https://www.threads.net/@thetransitguy/post/DGY0GP6B3hD/video-this-is-the-beijing-shanghai-corridor-which-takes-4-hours-and-18-minutes-to-cove
+[world transit]: https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/
+[road deaths per capita]: https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html
+
+**Unprecedented, civilization-scale disaster**, entirely a policy choice. We have the technology to do better.
+
+## Theory of change
+- **Internet / Social Media**: shows people what's possible, enables organizing
+- **Data for decision-making**: proliferation of sensors/data and tools for analyzing/responding
+- **New technology**: ebikes/micromobility, faster/quieter transit, app-cars / AVs can reduce car dependence
+
+<a target="_blank" href="https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/"><img v-click class="right-overlay" src="/subway-countries.jpeg"/></a>
+
+<a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
+
+---
+---
+# Hudson County – the opportunity
 
 ---
 layout: section
@@ -622,53 +673,6 @@ class: end
 
 # Thank you!
 
-
----
-class: us
----
-<style>
-.slidev-layout.us {
-  padding-right: 5rem;
-  h2 {
-    margin-top: 1.7rem;
-    margin-bottom: 0.5rem;
-  }
-  .right-overlay {
-    padding: 2rem;
-  }
-}</style>
-
-# Big picture – US transportation sector is broken
-≈100% car-dependence:
-
-- [\$TNs][IMF] of subsidies, [\$TNs][debt] of auto debt, [\$TNs][insurance] of auto insurance (other people's crashes)
-- [MMs][deaths] of violent deaths, [10MMs][injuries] of injuries, [10MMs][disease] of respiratory diseases / cognitive impairments
-- [MMmts][CO2] of CO₂; pollution / particulates / noise
-- [Worse mobility][cn hsr], no childhood autonomy, hollowed-out cities, less community
-
-[IMF]: https://www.imf.org/en/Topics/climate-change/energy-subsidies
-[debt]: https://www.lendingtree.com/auto/debt-statistics/
-[insurance]: https://www.statista.com/outlook/fmo/insurances/non-life-insurances/motor-vehicle-insurance/united-states
-[deaths]: https://en.wikipedia.org/wiki/Motor_vehicle_fatality_rate_in_U.S._by_year#By_year
-[injuries]: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813560#:~:text=In%202022%20an%20estimated%202.38,injured%20from%202020%20to%202021.
-[disease]: https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/ambient-air-pollution
-[CO2]: https://www.eia.gov/tools/faqs/faq.php?id=307&t=10
-
-[shinkansen]: https://en.wikipedia.org/wiki/Shinkansen#Safety_record
-[cn hsr]: https://www.threads.net/@thetransitguy/post/DGY0GP6B3hD/video-this-is-the-beijing-shanghai-corridor-which-takes-4-hours-and-18-minutes-to-cove
-[world transit]: https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/
-[road deaths per capita]: https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html
-
-**Unprecedented, civilization-scale disaster**, entirely a policy choice. We have the technology to do better.
-
-## Theory of change
-- **Internet / Social Media**: shows people what's possible, enables organizing
-- **Data for decision-making**: proliferation of sensors/data and tools for analyzing/responding
-- **New technology**: ebikes/micromobility, faster/quieter transit, app-cars / AVs can reduce car dependence
-
-<a target="_blank" href="https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/"><img v-click class="right-overlay" src="/subway-countries.jpeg"/></a>
-
-<a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
 
 ---
 ---
