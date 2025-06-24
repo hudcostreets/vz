@@ -154,6 +154,67 @@ Campaigns:
 [vzi]: https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/
 
 ---
+class: plots
+dragPos:
+  hom: 16,75,215,148
+  sp: 16,234,215,148
+  path: 16,393,215,147
+  jc: 241,73,185,242
+  hc: 241,325,185,216
+  xbl: 436,21,331,267
+  cb-m: 436,298,331,242
+  cb: 777,20,192,124
+  cb-r: 777,154,192,120
+  cb-g: 777,286,192,120
+  cb-u: 777,418,192,120
+---
+
+<style>
+.slidev-layout.plots {
+  & + footer { display: none }
+  padding-top: 1.6rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+
+<!--
+<div v-drag="'hom'"><img src="/hom.png"/></div>
+<div v-drag="'sp'"><img src="/njsp.png"/></div>
+<div v-drag="'path'"><img src="/path-vs19.png"/></div>
+<div v-drag="'jc'"><img src="/jc.gif" /></div>
+<div v-drag="'hc'"><img src="/hc-map.png"/></div>
+<div v-drag="'xbl'"><img src="/xbl.png"/></div>
+<div v-drag="'cb-m'"><img src="/g2410.png"/></div>
+<div v-drag="'cb'"><img src="/cb.png"/></div>
+<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
+<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
+<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
+-->
+
+<div v-drag="'hom'" ><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img src="/hom.png"/></a></div>
+<div v-drag="'sp'"  ><a target="_blank" href="https://crashes.hudcostreets.org/#per-year"><img src="/njsp.png"/></a></div>
+<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png"/></a></div>
+<div v-drag="'jc'"  ><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" /></a></div>
+<div v-drag="'hc'"  ><a target="_blank" href="https://crashes.hudcostreets.org/map/hudson"><img src="/hc-map.png"/></a></div>
+<div v-drag="'xbl'" ><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png"/></a></div>
+<div v-drag="'cb-m'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png"/></a></div>
+<div v-drag="'cb'"  ><a target="_blank" href="https://ctbk.dev/"><img src="/cb.png"/></a></div>
+<div v-drag="'cb-r'"><a target="_blank" href="https://ctbk.dev/?s=b&pct&rt=ce&d=2002-"><img src="/cb-r.png"/></a></div>
+<div v-drag="'cb-g'"><a target="_blank" href="https://ctbk.dev/?y=m&s=g&pct&g=mf&d=1406-2102"><img src="/cb-g.png"/></a></div>
+<div v-drag="'cb-u'"><a target="_blank" href="https://ctbk.dev/?s=u&pct"><img src="/cb-u.png"/></a></div>
+
+# Proving it, locally
+
+[hom-cmp]: https://crashes.hudcostreets.org/#vs-homicides
+[xbl]: https://github.com/hudcostreets/hudson-transit
+[grove-2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
+[path]: https://path.hudcostreets.org/#vs-2019
+
+
+---
 layout: section
 ---
 # Status Quo
@@ -168,6 +229,7 @@ dragPos:
 ---
 
 <style>
+
 .deaths {
   &+footer { display: none; }
   .slidev-vclick-hidden { display: none; }
@@ -190,7 +252,7 @@ dragPos:
 
 <div v-click="[0,1]">
 
-# Status Quo – Deaths, Injuries, Property Damage
+# Hudson County – Deaths, Injuries, Property Damage
 
 Car crashes kill more people **than murders**
 
@@ -198,7 +260,7 @@ Car crashes kill more people **than murders**
 </div>
 <div v-click>
 
-# Status Quo – Deaths, Injuries, Property Damage
+# Hudson County – Deaths, Injuries, Property Damage
 
 - 50 crashes per day (reported to police).
 - Per year:
@@ -253,7 +315,7 @@ People need (and want) transportation alternatives…
 <div v-click>
 <br/>
 
-"D" air quality grade…
+["D" air quality grade…][ALA]
 </div>
 
 <img v-drag="'cars'" src="/hc_vehs_title.png" />
@@ -377,6 +439,7 @@ as 5 car lanes (Lincoln+Holland) _combined_ 🤯.
 [xbl faq]: https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html
 
 <a href="https://github.com/hudcostreets/hudson-transit#peak" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
+
 <!--
 <img v-drag="'xbl'" src="/xbl.png"/>
 -->
@@ -555,66 +618,6 @@ class: end
 
 # Thank you!
 
-
----
-class: plots
-dragPos:
-  hom: 16,75,215,148
-  sp: 16,234,215,148
-  path: 16,393,215,147
-  jc: 241,73,185,242
-  hc: 241,325,185,216
-  xbl: 436,21,331,267
-  cb-m: 436,298,331,242
-  cb: 777,20,192,124
-  cb-r: 777,154,192,120
-  cb-g: 777,286,192,120
-  cb-u: 777,418,192,120
----
-
-<style>
-.slidev-layout.plots {
-  & + footer { display: none }
-  padding-top: 1.6rem;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>
-
-<!--
-<div v-drag="'hom'"><img src="/hom.png"/></div>
-<div v-drag="'sp'"><img src="/njsp.png"/></div>
-<div v-drag="'path'"><img src="/path-vs19.png"/></div>
-<div v-drag="'jc'"><img src="/jc.gif" /></div>
-<div v-drag="'hc'"><img src="/hc-map.png"/></div>
-<div v-drag="'xbl'"><img src="/xbl.png"/></div>
-<div v-drag="'cb-m'"><img src="/g2410.png"/></div>
-<div v-drag="'cb'"><img src="/cb.png"/></div>
-<div v-drag="'cb-r'"><img src="/cb-r.png"/></div>
-<div v-drag="'cb-g'"><img src="/cb-g.png"/></div>
-<div v-drag="'cb-u'"><img src="/cb-u.png"/></div>
--->
-
-<div v-drag="'hom'" ><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img src="/hom.png"/></a></div>
-<div v-drag="'sp'"  ><a target="_blank" href="https://crashes.hudcostreets.org/#per-year"><img src="/njsp.png"/></a></div>
-<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png"/></a></div>
-<div v-drag="'jc'"  ><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" /></a></div>
-<div v-drag="'hc'"  ><a target="_blank" href="https://crashes.hudcostreets.org/map/hudson"><img src="/hc-map.png"/></a></div>
-<div v-drag="'xbl'" ><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl.png"/></a></div>
-<div v-drag="'cb-m'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png"/></a></div>
-<div v-drag="'cb'"  ><a target="_blank" href="https://ctbk.dev/"><img src="/cb.png"/></a></div>
-<div v-drag="'cb-r'"><a target="_blank" href="https://ctbk.dev/?s=b&pct&rt=ce&d=2002-"><img src="/cb-r.png"/></a></div>
-<div v-drag="'cb-g'"><a target="_blank" href="https://ctbk.dev/?y=m&s=g&pct&g=mf&d=1406-2102"><img src="/cb-g.png"/></a></div>
-<div v-drag="'cb-u'"><a target="_blank" href="https://ctbk.dev/?s=u&pct"><img src="/cb-u.png"/></a></div>
-
-# Proving it, locally
-
-[hom-cmp]: https://crashes.hudcostreets.org/#vs-homicides
-[xbl]: https://github.com/hudcostreets/hudson-transit
-[grove-2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
-[path]: https://path.hudcostreets.org/#vs-2019
 
 ---
 class: us
