@@ -401,7 +401,7 @@ dragPos:
   - JFK: 25,000 vehicles per day, ≤2,000 per hour
 </div>
 
-<video class="wt" src="/wt.mp4" onclick="this.ended ? (this.currentTime = 0, this.play()) : this.paused ? this.play() : this.pause()" />
+<video class="wt" src="/wt.mp4" controls />
 </div>
 <div v-click="2">
 
@@ -546,51 +546,49 @@ class: opps-section
 <img src="/mode-capacities.png" />
 
 ---
-class: opps
+class: brt
 dragPos:
-  cars: 405,38,565,_
-  mode: 54,173,889,_
-  intra: 52,281,629,_
+  jfk: 568,18,402,_
+  cost: 13,311,669,_
 ---
+
 <style>
-.opps {
+.brt {
   &+footer { display: none; }
-  .slidev-vclick-hidden { display: none; }
-  padding-left: 2rem;
-  .left {
-    width: 42%;
+  img { z-index: 1 !important; }
+  img[src*="cost"] { z-index: 20 !important; }
+  video {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
   }
 }
 </style>
+# BRT on JFK
+- Bus Rapid Transit: bus lanes, signal priority, etc.
+- Ridership could ≈ a subway line (**10-20x** a car lane)
 
-# Opportunities
-- 30% of cars are households' 2nd (or more)
-  - Car-sharing
-  - Replacing with (e)bikes, scooters
-<div v-click="[0,1]">
-<img v-drag="'cars'" src="/hc_vehs_title.png" />
-</div>
-<div v-click="[1,2]">
-<img v-drag="'cars'" src="/hc_vehs_years_title.png" />
-</div>
+
 <div v-click="1">
+<video src="/42-brt.mp4" controls loop muted />
 
-- 33% of households already car-free
+- Can double as bike/ebike/scooter lane
+  - Gets them off sidewalk!
 </div>
-<div v-click="[2,3]">
-<img v-drag="'mode'" src="/njtpa-hc-modes.png" />
-</div>
+
+<img v-drag="'jfk'" src="/jfk-map.png" />
+
 <div v-click="2">
+<img v-drag="'cost'" src="/jfk-crash-cost.png" />
 
-- < 50% of trips by car
+- Crashes on JFK are expensive
+  - $27MM/yr directly from crashes
+  - [$200MM/yr][JFK] total ‼️
 </div>
-<div v-click="3">
 
-- 68% of trips are within Hudson County
-</div>
-<div v-click="3">
-<img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
-</div>
+[JFK]: https://www.hcnj.us/wp-content/uploads/2022/02/JFK_Study-Report_Final.pdf
 
 <!--
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFg5PRpeLzs?t=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
