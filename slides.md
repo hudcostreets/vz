@@ -28,10 +28,12 @@ Slides: [vz.hccs.dev](https://vz.hccs.dev)
 ---
 class: quiz
 dragPos:
-  map: 535,0,445,_
+  jfk: 535,0,445,_
 ---
+
 <style>
 .quiz {
+  &+footer { display: none; }
   .body {
     width: 55%;
   }
@@ -52,20 +54,18 @@ dragPos:
 
 <div class="body">
 
-What's the busiest hour of the year (most people carried) on:
+#### **Q:** What's the busiest hour of the year (most people carried) on:
 - JFK Boulevard
 - Rt 139
 
 <br/>
-<h1>🤔</h1>
 
-<div v-click>
-Answer in a few slides…
+# 🤔
+
+<div v-click>Answer in a few slides…</div>
 </div>
 
-</div>
-
-<img v-drag="'map'" src="/jp-jfk.jpg" />
+<img v-drag="'jfk'" src="/jp-jfk.jpg" />
 <div class="credit">
 Credit: @jerseyphotographer
 </div>
@@ -219,14 +219,12 @@ Car crashes kill more people **than murders**
 ---
 class: cars
 dragPos:
-  cars: 405,38,565,_
-  mode: 54,173,889,_
-  intra: 52,281,629,_
+  cars: 410,38,560,_
 ---
 
 <style>
-.cars+footer { display: none; }
 .cars {
+  &+footer { display: none; }
   .slidev-vclick-hidden { display: none; }
   padding-left: 2rem;
   .left {
@@ -234,7 +232,6 @@ dragPos:
   }
 }
 </style>
-<div v-click="[0,1]">
 
 # Cost of car ownership
 277k cars in Hudson County
@@ -243,77 +240,114 @@ dragPos:
 - **≈$3BN / year** buying, insuring, maintaining
 - **≈$2BN auto debt** ($1TN nation-wide)
 - **10% increase** since COVID ‼️
-  - Traffic and parking will only get worse, if number of cars keeps rising
-  - People need (and want) transportation alternatives
 
+<br/>
+<div v-click>
+Traffic and parking will only get worse, if the number of cars keeps rising.
+</div>
+<br/>
+<div v-click>
+People need (and want) transportation alternatives…
 </div>
 </div>
-<div v-click="[0,2]">
 <img v-drag="'cars'" src="/hc_vehs_title.png" />
+
+---
+layout: section
+---
+# Opportunities
+
+---
+class: quiz-a
+dragPos:
+  wt: 342,185,321,_
+---
+
+<style>
+.quiz-a {
+  &+footer { display: none; }
+  .body {
+    width: 75%;
+  }
+  video.wt {
+    border: 1rem solid #00793f;
+    border-left: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+}
+</style>
+# Pop Quiz 💡
+
+<div class="body">
+
+#### **Q:** What's the busiest hour of the year (most people carried) on:
+- JFK Boulevard
+- Rt 139
+
+<br/>
+</div>
+<div v-click="1">
+
+### **A:** Jersey City Ward Tour
+- 2,000 cyclists, 5-30 minutes
+
+<video class="wt" src="/wt.mp4" onclick="this.ended ? (this.currentTime = 0, this.play()) : this.paused ? this.play() : this.pause()" />
+</div>
+<div v-click="2">
+
+- 16 miles, 6 wards
+
+<img v-drag="'wt'" src="/wt.png" />
 </div>
 
-<div v-click="1">
+---
+class: opps
+dragPos:
+  cars: 405,38,565,_
+  mode: 54,173,889,_
+  intra: 52,281,629,_
+---
+<style>
+.opps {
+  &+footer { display: none; }
+  .slidev-vclick-hidden { display: none; }
+  padding-left: 2rem;
+  .left {
+    width: 42%;
+  }
+}
+</style>
 
 # Opportunities
 - 30% of cars are households' 2nd (or more)
   - Car-sharing
   - Replacing with (e)bikes, scooters
-</div>
-<div v-click="[2,3]">
+<div v-click="[0,1]">
 <img v-drag="'cars'" src="/hc_vehs_years_title.png" />
 </div>
-<div v-click="2">
+<div v-click="1">
 
 - 33% of households already car-free
 </div>
-<div v-click="[3,4]">
+<div v-click="[1,2]">
 <img v-drag="'mode'" src="/njtpa-hc-modes.png" />
 </div>
-<div v-click="3">
+<div v-click="2">
 
 - < 50% of trips by car
 </div>
-<div v-click="4">
+<div v-click="3">
 
 - 68% of trips are within Hudson County
 </div>
-<div v-click="4">
+<div v-click="3">
 <img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
 </div>
-
----
-class: mode
-dragPos:
-  homs: 257,265,100,_
-  modes: 18,147,947,_
-  intra: 247,289,630,_
----
-
-<style>
-.mode+footer { display: none; }
-</style>
-
-# Hudson County – < 50% of trips by car
-
-(only non-NYC US county)
-
-<img v-drag="'modes'" src="/njtpa-hc-modes.png" />
 
 [ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
-
----
-class: car-share
-dragPos:
-  intra: 508,349,381,_
----
-
-# Hudson County – Car Share Opportunity
-- 50-75% of vehicles belong to multi-vehicle households
-- 68% of trips are within Hudson County
-- ZipCar, Turo, GetAround
-- "Corner cars"
-
-<img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
 
 ---
 class: bike
@@ -816,6 +850,7 @@ TODO:
 - TurnpikeTrap
 - JSQ
 
-- update hccs intro slide, campaigns
 - glowy crash map 2022 update
 - Specify HC in homs plot
+  - Add statewide click
+- Link "deaths" plots
