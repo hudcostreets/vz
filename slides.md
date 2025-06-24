@@ -261,9 +261,56 @@ class: us
 
 <a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
 
+
 ---
+class: opps0
+dragPos:
+  cars: 396,125,565,_
+  mode: 54,173,889,_
+  intra: 54,192,840,_
+  weather: 28,248,558,_
+  bike: 595,20,364,_
 ---
+
+<style>
+.opps0 {
+  &+footer { display: none; }
+  .slidev-vclick-hidden { display: none; }
+  padding-left: 2rem;
+  .left {
+    width: 50%;
+  }
+}
+</style>
+
 # Hudson County – the opportunity
+<div v-click="[0,1]">
+<img v-drag="'mode'" src="/njtpa-hc-modes.png" />
+</div>
+
+- < 50% of trips by car
+<div v-click="[1,2]">
+<img v-drag="'cars'" src="/hc_vehs_years_title.png" />
+</div>
+<div v-click="1">
+
+- 33% of households car-free
+</div>
+<div v-click="2">
+
+- 68% of trips are within Hudson County
+</div>
+<div v-click="[2,3]">
+<img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
+</div>
+<div v-click="3" class="left">
+
+- Perfect size, density, and weather for year-round micromobility (bikes, e-bikes, scooters)
+</div>
+<div v-click="3">
+<img v-drag="'weather'" src="/hc-weather.png" />
+<img v-drag="'bike'" src="/hc-bike-len.png" />
+</div>
 
 ---
 layout: section
