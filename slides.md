@@ -305,7 +305,7 @@ dragPos:
 </div>
 <div v-click="3" class="left">
 
-- Perfect size, density, and weather for year-round micromobility (bikes, e-bikes, scooters)
+- Perfect size, density, weather for micromobility (bikes, e-bikes, scooters)
 </div>
 <div v-click="3">
 <img v-drag="'weather'" src="/hc-weather.png" />
@@ -646,6 +646,45 @@ Show station map by add date
 [subs]: https://ctbk.dev/?s=u&pct&r=jh
 
 ---
+layout: iframe-right
+url: https://map.bikejc.org/?l=wbr
+class: jc
+dragPos:
+  bb: 18,218,457,_
+  bbl: 443,378,261,_
+---
+
+<style>
+.jc {
+  &+footer { display: none }
+  .bb p {
+    position: relative;
+    z-index: 100;
+  }
+  img[src*="map"] {
+    z-index: 1 !important;
+  }
+}
+</style>
+
+# Bike infrastructure
+- Jersey City: ≈2,000 lane-miles for cars, ≈20 miles of protected bike lanes
+  - [JC Bike Master Plan][bmp] / [bikejc.github.io/bike-master-plan] / [PDF]
+
+<div v-click class="bb">
+<img v-drag="'bb'" src="/bb-map.png" />
+<img v-drag="'bbl'" src="/bb-lines.png" />
+
+[Bike bus (2023)][bb]:
+</div>
+
+[bb]: https://dev.bikejc.org/bike-bus/
+[map.bikejc.org]: https://map.bikejc.org
+[bmp]: https://street-plans.com/lets-ride-jc-bicycle-master-plan-jersey-city-nj/
+[bikejc.github.io/bike-master-plan]: https://bikejc.github.io/bike-master-plan/
+[PDF]: https://cdn5-hosted.civiclive.com/UserFiles/Servers/Server_6189660/File/Community/Transportation/LetsRideJCMasterPlan-FinalDraft%206.16.19_09_30.pdf
+
+---
 class: pbls
 ---
 
@@ -683,86 +722,44 @@ class: pbls
 class: ebikes
 dragPos:
   bunch: 342,285,350,_
-  baboe: 632,94,339,_
-  bh: -1,328,399,_
-  nyc: 484,21,212,_
+  baboe: 643,-1,339,_
+  bh: 93,264,483,_
+  nyc: 764,-2,217,_
+  dot: 576,264,402,_
 ---
 
-# Micromobility
-E-bikes / scooters
+<style>
+.ebikes {
+  padding-top: .8rem;
+}
+</style>
+
+# Micromobility (e-bikes / scooters)
 
 - Best-selling electric vehicles in the US
-- Cheaper, cleaner, quieter, **safer**, faster mobility
+- Cheaper, cleaner, quieter, **safer**, faster alternatives to driving
+<div v-click="1">
+
+<ul><li style="list-style: none">
+
+  - NJ: **0** pedestrian deaths from e-bikes, **ever** (vs. **100's/year by cars**)
+  - Bike Hoboken: 0 crash reports re: (e)bikes on sidewalks
+  - Better infrastructure + enforcing existing laws = safer streets
+</li></ul>
+</div>
+<div v-click="2">
+
+- 💡 E-bike rebate/voucher programs
+</div>
 
 <img v-drag="'bunch'" src="/bunch.jpg" />
 <img v-drag="'baboe'" src="/baboe.jpg" />
+
+<div v-click="1">
 <img v-drag="'bh'" src="/bh.png" />
 <img v-drag="'nyc'" src="/nyc-ebikes.png" />
-
----
-layout: iframe-right
-url: https://map.bikejc.org/?l=wbr
-class: jc
----
-<style>
-/*.jc + footer { width: 50%; right: auto; }*/
-.jc + footer { display: none }
-</style>
-
-# [map.bikejc.org]
-- Wraps/Joins [JC ArcGIS layers][jc gis]
-- ≈2,000 lane-miles for cars, ≈20 miles of protected bike lanes
-
-See also:
-- [JC Bike Master Plan][bmp] / [bikejc.github.io/bike-master-plan] / [PDF]
-- [NJGIN index] of agency ArcGIS servers:
-  [![](/njgin.png)][NJGIN index]
-
-[map.bikejc.org]: https://map.bikejc.org
-[bmp]: https://street-plans.com/lets-ride-jc-bicycle-master-plan-jersey-city-nj/
-[bikejc.github.io/bike-master-plan]: https://bikejc.github.io/bike-master-plan/
-[PDF]: https://cdn5-hosted.civiclive.com/UserFiles/Servers/Server_6189660/File/Community/Transportation/LetsRideJCMasterPlan-FinalDraft%206.16.19_09_30.pdf
-[jc gis]: https://jerseycity.maps.arcgis.com/apps/mapviewer/index.html?webmap=c8b0f0723aad4c68ab68861ee071f218
-[NJGIN index]: https://njogis-newjersey.opendata.arcgis.com/
-
----
-layout: iframe-right
-url: /bh24.pdf
-class: hob
----
-<style>
-.hob + footer { display: none; }
-.dark .slidev-layout.hob {
-  background: #6436a9 url('/bh-white.png') no-repeat right bottom;
-  --slidev-code-background: #6436a9;
-  --slidev-code-radius: 0;
-  background-size: 6rem;
-}
-.light .slidev-layout.hob {
-  /*color: #6436a9;*/
-  color: black;
-  background: white url('/bh.png') no-repeat right bottom;
-  background-size: 6rem;
-}
-.slidev-layout.hob {
-  h1 {
-    line-height: 3.3rem;
-  }
-}
-</style>
-
-# [2024 Bike Hoboken Traffic Injury Report][bh24]
-- [Bike Hoboken] OPRA'd all 2024 crash records
-- Data entry from PDFs (many volunteer-hours)
-- [NJTR-1] forms (crashes involving autos) and "incident reports" (ped and/or bike only)
-
-**0 pedestrian injuries involving bicycles or e-bikes on a sidewalk** (despite [brouhaha], "test+vest" [ordinance][ord])
-
-[bh24]: https://www.bikehoboken.org/articles/2024-bike-hoboken-traffic-injury-report
-[Bike Hoboken]: https://www.bikehoboken.org/
-[NJTR-1]: https://www.nj.gov/transportation/refdata/accident/pdf/NJTR-1CrashReportManual2023.pdf
-[brouhaha]: https://www.nj.com/hudson/2024/03/tests-and-vests-for-hoboken-ebike-workers-is-now-law-despite-pushback-from-police-chief.html?gift=03ec6bf2-a21c-4217-beb2-00b526b0d92a
-[ord]:https://www.hobokennj.gov/resources/commercial-e-delivery-operators
+<img v-drag="'dot'" src="/nyc-dot.jpg" />
+</div>
 
 ---
 layout: section
@@ -771,23 +768,17 @@ class: end
 
 # Thank you!
 
-
 ---
 ---
 
 TODO:
-- Fix JFK; bus lane
-- Hudson County Bike Share Opportunity (300,000 rides/month)
-- Ward Tour
-- Ebikes
-- Viaduct
-- Ward Tour, capacity
 - Eli Bender
 - TurnpikeTrap
 - JSQ
+- Trees crash
+- Viaduct streetmixes
 
 - glowy crash map 2022 update
 - Specify HC in homs plot
   - Add statewide click
 - Link "deaths" plots
-- WT kids
