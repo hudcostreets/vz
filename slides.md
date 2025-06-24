@@ -47,6 +47,7 @@ dragPos:
   }
 }
 </style>
+
 # Pop Quiz 💡
 
 <div class="body">
@@ -59,7 +60,7 @@ What's the busiest hour of the year (most people carried) on:
 <h1>🤔</h1>
 
 <div v-click>
-Keep scrolling for the answer…
+Answer is a few slides ahead…
 </div>
 
 </div>
@@ -76,7 +77,7 @@ dragPos:
   bus: 427,347,188,180
   njt: 627,347,188,180
   path: 427,133,265,_
-  vz: 707,30,228,_
+  vz: 707,31,228,_
 ---
 
 <style>
@@ -86,7 +87,7 @@ dragPos:
   h1 { margin-bottom: 0 }
   p { margin: 0.4rem 0; }
   li { line-height: 2rem }
-  blockquote { width: 75% }
+  blockquote { width: 70% !important; }
   div.path { height: 36.5% }
   img {
     width: 100%;
@@ -94,6 +95,13 @@ dragPos:
     &[src*="path"] {
       object-fit: cover;
       object-position: top center;
+    }
+  }
+  .body {
+    /*font-size: 1rem;*/
+    p:first-child { margin-top: 0; }
+    li {
+      line-height: 1.8rem !important;
     }
   }
 }
@@ -104,15 +112,19 @@ dragPos:
 
 
 # Hudson County Complete Streets
-> Our mission is to improve connectivity and transportation equity in Hudson County by advocating for safe streets, pedestrian and cycling infrastructure, and access to transit in each community.
+> Our mission is to improve mobility in Hudson County by advocating for<br/>**safe streets**, pedestrian and cycling **infrastructure**, and **access to transit.**
+
+<div class="body">
 
 Campaigns:
-- [Improving PATH service][PATH]
-- [Supporting congestion pricing][CP]
-- [Opposing $11BN Turnpike-widening][TA]
+- [Improve PATH service][PATH]
+- [Bus rapid transit on JFK][JFK]
+- Bike/Ped infrastructure ([Viaduct], [JFK Blvd E])
+- [Oppose $11BN Turnpike-widening][TA]
 - [Hudson County Vision Zero Action Plan][VZ]
 
 👉 [hudcostreets.org]
+</div>
 
 <div v-drag="'tt'"><a target="_blank" href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
 <div v-drag="'bus'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/"><img src="/bus.jpeg"/></a></div>
@@ -128,6 +140,9 @@ Campaigns:
 -->
 
 [PATH]: https://hudcostreets.org/panynj
+[JFK]: https://hudcostreets.org/fix-jfk-blvd
+[Viaduct]: https://hudcostreets.org/viaduct
+[JFK Blvd E]: https://hudcostreets.org/jfkblvdeastredesign
 [CP]: https://nyc.streetsblog.org/2025/03/21/advocates-demand-new-jersey-agencies-cough-up-congestion-pricing-data
 [TA]: https://www.nj.com/traffic/2025/03/nj-turnpike-widening-opponents-demand-fresh-cost-and-traffic-numbers-for-107-b-project.html?gift=81525149-0b28-4c98-bd63-b6241996fd00
 [VZ]: https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/
@@ -139,66 +154,79 @@ Campaigns:
 [vzi]: https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/
 
 ---
-class: vz
+class: deaths
 dragPos:
-  plot: 15,236,353,_
-  map: 629,93,342,_
-  stats: 377,188,246,_
+  plot: 20,218,370,_
+  stats: 397,217,224,_
+  homs: 55,127,689,_
+  map: 629,92,342,_
 ---
 
 <style>
-.vz {
+.deaths {
+  &+footer { display: none; }
+  .slidev-vclick-hidden { display: none; }
   h1 {
     position: relative;
-    z-index: 10 
+    z-index: 10
   }
   img {
     z-index: 1 !important;
   }
+  .link {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    font-size: 0.9rem;
+    z-index: 2;
+  }
 }
 </style>
 
+<div v-click="[0,1]">
+
 # Status Quo – Deaths, Injuries, Property Damage
-50 crashes per day (reported to police). Annually (2020-2024):
-- 23 deaths: 9 pedestrians, 10 drivers, 2 passengers, 1-2 cyclists
-- 150 serious injuries, 1,000-4,000 other injuries
-- Car crashes kill more people than murders
+
+- 50 crashes per day (reported to police).
+- Per year:
+  - 23 deaths (9 pedestrians, 10 drivers, 2 passengers, 1-2 cyclists)
+  - 150 serious injuries, 1,000-4,000 other injuries
 
 <img v-drag="'plot'" src="/hc-traffic-deaths.png" />
 <img v-drag="'stats'" src="/hc-crash-stats.png" />
 <img v-drag="'map'" src="/hc-crash-map.png" />
 
+</div>
+<div v-click>
+
+# Status Quo – Deaths, Injuries, Property Damage
+
+Car crashes kill more people **than murders**
+
+<img v-drag="'homs'" src="/hc-vs-homs.png" />
+</div>
+<div class="link">
+
+[crashes.hudcostreets.org](https://crashes.hudcostreets.org)
+</div>
+
 ---
-class: hudco
+class: mode
 dragPos:
-  homs: 0,-102,0,0
-  modes: 0,-102,0,0
-  intra: 508,349,381,_
+  homs: 257,265,100,_
+  modes: 18,147,947,_
+  intra: 247,289,630,_
 ---
 
 <style>
-.hudco {
-  .left {
-    width: 60%;
-  }
-}
+.mode+footer { display: none; }
 </style>
-<div class="left">
 
-# Hudson County – <br>Transportation Sector
+# Status Quo – < 50% of trips by car
 
-<div>
+(only non-NYC US county)
 
-- **< 50% of trips by car** (only non-NYC US county)
-- **≈$2BN in auto debt**
-- **Car crashes kill more people than murders**
-- ["D" air quality rating][ALA]
-
-<img v-drag="'homs'" src="/hc-vs-homs.png" />
 <img v-drag="'modes'" src="/njtpa-hc-modes.png" />
-
-</div>
-</div>
 
 [ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
 
@@ -213,7 +241,7 @@ dragPos:
 - ZipCar, Turo, GetAround
 - "Corner cars"
 
-<img v-drag="'intra'" src="/njtpa-intra-hc.png" />
+<img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
 
 ---
 class: bike
@@ -249,7 +277,7 @@ class: bike
   - Letting kids bike safely = reduce traffic, fix school drop-off, restore autonomy (to parents too)
   - Bike buses
   - Safe routes to school
-  
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFg5PRpeLzs?t=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <video class="wt" src="/wt.mp4" autoplay></video>
@@ -391,7 +419,7 @@ class: ctbk
 - **10,000 trips per day** achievable in **5 years**
   - Largely replacing car trips
   - Cheaper, cleaner, quieter, safer mobility
-- Grove St (≈5 car-parking spots): **300 rides per day** 
+- Grove St (≈5 car-parking spots): **300 rides per day**
 - JC+HOB: [63%][ebikes] ebike share, [78%][subs] annual members
 
 [![](/g2505.png)][2505]
