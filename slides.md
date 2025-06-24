@@ -326,6 +326,8 @@ People need (and want) transportation alternatives…
 class: quiz-a
 dragPos:
   wt: 366,211,297,_
+  bb1: 196,17,385,_
+  bb2: 580,16,392,_
 ---
 
 <style>
@@ -380,6 +382,8 @@ dragPos:
 <img v-drag="'wt'" src="/wt.png" />
 </div>
 <div v-click="3" class="left">
+<img v-drag="'bb2'" src="/bike-bus2.jpeg" />
+<img v-drag="'bb1'" src="/bike-bus1.jpeg" />
 
 - Children can bike from downtown, to Greenville, to West Side, to Heights, and back.
 </div>
