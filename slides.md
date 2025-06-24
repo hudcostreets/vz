@@ -620,7 +620,7 @@ class: ctbk
 }
 </style>
 
-# Hudson County – <br>Bike Share Opportunity
+# Bike Share
 - **10,000 trips per day** achievable in **5 years**
   - Largely replacing car trips
   - Cheaper, cleaner, quieter, safer mobility
@@ -644,6 +644,60 @@ Show station map by add date
 [2505]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2505
 [ebikes]: https://ctbk.dev/?s=b&pct&rt=ce&d=2002-&r=jh
 [subs]: https://ctbk.dev/?s=u&pct&r=jh
+
+---
+class: pbls
+---
+
+<style>
+.pbls {
+  &+footer { display: none; }
+  .slidev-vclick-hidden { display: none; }
+  padding-left: 2rem;
+  h1 { margin-bottom: 0.5rem; }
+  video {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+  img {
+    width: 45%;
+  }
+}
+</style>
+
+# Bike infrastructure
+[Viaduct multi-use path][vd]!
+
+![](/vd0.png)
+
+![](/vd1.png)
+
+<video src="/viaduct.mov" controls loop muted />
+
+[vd]: https://www.hcnj.us/blog/2025/05/22/15886/
+
+---
+class: ebikes
+dragPos:
+  bunch: 342,285,350,_
+  baboe: 632,94,339,_
+  bh: -1,328,399,_
+  nyc: 484,21,212,_
+---
+
+# Micromobility
+E-bikes / scooters
+
+- Best-selling electric vehicles in the US
+- Cheaper, cleaner, quieter, **safer**, faster mobility
+
+<img v-drag="'bunch'" src="/bunch.jpg" />
+<img v-drag="'baboe'" src="/baboe.jpg" />
+<img v-drag="'bh'" src="/bh.png" />
+<img v-drag="'nyc'" src="/nyc-ebikes.png" />
 
 ---
 layout: iframe-right
