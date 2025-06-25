@@ -774,9 +774,7 @@ class: end
 
 # Thank you!
 
----
----
-
+<!--
 TODO:
 - Eli Bender
 - TurnpikeTrap
@@ -789,3 +787,4 @@ TODO:
   - Add statewide click
 - Link "deaths" plots
 - more cargobike photos
+-->
