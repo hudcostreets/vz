@@ -65,7 +65,10 @@ dragPos:
 <div v-click>Answer in a few slides…</div>
 </div>
 
+<a v-drag="'jfk'" href="https://www.instagram.com/p/DKIkVjuxqsv/" target="_blank"><img src="/jp-jfk.jpg" /></a>
+<!--
 <img v-drag="'jfk'" src="/jp-jfk.jpg" />
+-->
 <div class="credit">
 Credit: @jerseyphotographer
 </div>
@@ -126,11 +129,11 @@ Campaigns:
 👉 [hudcostreets.org]
 </div>
 
-<div v-drag="'tt'"><a target="_blank" href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
-<div v-drag="'bus'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/"><img src="/bus.jpeg"/></a></div>
-<div v-drag="'njt'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/action-alert-tell-gov-murphy-142m-for-nj-transit/"><img src="/njt.jpeg"/></a></div>
-<div v-drag="'path'" class="path"><a target="_blank" href="https://hudcostreets.org/panynj"><img src="/path.jpg"/></a></div>
-<div v-drag="'vz'"><a target="_blank" href="https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/"><img src="/vz.png"/></a></div>
+<div v-drag="'tt'"><a href="https://turnpiketrap.org/" target="_blank"><img src="/tt.png"/></a></div>
+<div v-drag="'bus'"><a href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/" target="_blank"><img src="/bus.jpeg"/></a></div>
+<div v-drag="'njt'"><a href="https://newsletter.hudcostreets.org/archive/action-alert-tell-gov-murphy-142m-for-nj-transit/" target="_blank"><img src="/njt.jpeg"/></a></div>
+<div v-drag="'path'" class="path"><a href="https://hudcostreets.org/panynj" target="_blank"><img src="/path.jpg"/></a></div>
+<div v-drag="'vz'"><a href="https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/" target="_blank"><img src="/vz.png"/></a></div>
 <!--
 <img v-drag="'tt'" src="/tt.png"/>
 <img v-drag="'bus'" src="/bus.jpeg"/>
@@ -285,12 +288,18 @@ dragPos:
 
 # Hudson County – the opportunity
 <div v-click="[0,1]">
+<a v-drag="'mode'" href="https://www.njtpa.org/NJTPA/media/Documents/Data-Maps/Modeling-Surveys/Household-Travel-Survey/RHTS_Hudson_f1.pdf" target="_blank"><img src="/njtpa-hc-modes.png" /></a>
+<!--
 <img v-drag="'mode'" src="/njtpa-hc-modes.png" />
+-->
 </div>
 
 - < 50% of trips by car, today
 <div v-click="[1,2]">
+<a v-drag="'cars'" href="https://github.com/hudcostreets/household-vehicles/tree/main/hudson#vehicles-per-household-hudson-county" target="_blank"><img src="/hc_vehs_years_title.png" /></a>
+<!--
 <img v-drag="'cars'" src="/hc_vehs_years_title.png" />
+-->
 </div>
 <div v-click="1">
 
@@ -301,7 +310,10 @@ dragPos:
 - 68% of trips are within Hudson County
 </div>
 <div v-click="[2,3]">
+<a v-drag="'intra'" href="https://www.njtpa.org/NJTPA/media/Documents/Data-Maps/Modeling-Surveys/Household-Travel-Survey/RHTS_Hudson_f1.pdf" target="_blank"><img src="/njtpa-intra-hc-crop.png" /></a>
+<!--
 <img v-drag="'intra'" src="/njtpa-intra-hc-crop.png" />
+-->
 </div>
 <div v-click="3" class="left">
 
@@ -406,17 +418,27 @@ dragPos:
 <div v-click="2">
 
 - 16 miles, 6 wards
-
-<img v-drag="'wt'" src="/wt.png" />
 </div>
 <div v-click="3" class="left">
-<img v-drag="'bb2'" src="/bike-bus2.jpeg" />
-<img v-drag="'bb1'" src="/bike-bus1.jpeg" />
 
 - Children can bike from downtown, to Greenville, to West Side, to Heights, and back.
 </div>
 <div v-click="4" class="left inner">
 <ul><li><ul><li>When we make it safe (no cars)</li></ul></li></ul>
+</div>
+<div v-click="2">
+<a v-drag="'wt'" href="https://www.bikejc.org/ward-tour" target="_blank"><img src="/wt.png" /></a>
+<!--
+<img v-drag="'wt'" src="/wt.png" />
+-->
+</div>
+<div v-click="3" class="left">
+<a v-drag="'bb2'" href="https://instagram.com/jcbikebus" target="_blank"><img src="/bike-bus2.jpeg" /></a>
+<a v-drag="'bb1'" href="https://instagram.com/jcbikebus" target="_blank"><img src="/bike-bus1.jpeg" /></a>
+<!--
+<img v-drag="'bb2'" src="/bike-bus2.jpeg" />
+<img v-drag="'bb1'" src="/bike-bus1.jpeg" />
+-->
 </div>
 
 ---
@@ -461,7 +483,10 @@ dragPos:
 
 Car crashes kill more people **than murders**
 
+<a v-drag="'homs'" href="https://crashes.hudcostreets.org/#vs-homicides" target="_blank"><img src="/hc-vs-homs.png" /></a>
+<!--
 <img v-drag="'homs'" src="/hc-vs-homs.png" />
+-->
 </div>
 <div v-click>
 
@@ -472,10 +497,14 @@ Car crashes kill more people **than murders**
   - 23 deaths (9 pedestrians, 10 drivers, 2 passengers, 1-2 cyclists)
   - 150 serious injuries, 1,000-4,000 other injuries
 
+<div v-drag="'plot'"><a href="https://crashes.hudcostreets.org/c/hudson" target="_blank"><img src="/hc-traffic-deaths.png" /></a></div>
+<div v-drag="'stats'"><a href="https://crashes.hudcostreets.org/c/hudson/#stats" target="_blank"><img src="/hc-crash-stats.png" /></a></div>
+<div v-drag="'map'"><a href="https://crashes.hudcostreets.org" target="_blank"><img src="/hc-crash-map.png" /></a></div>
+<!--
 <img v-drag="'plot'" src="/hc-traffic-deaths.png" />
 <img v-drag="'stats'" src="/hc-crash-stats.png" />
 <img v-drag="'map'" src="/hc-crash-map.png" />
-
+-->
 </div>
 
 <div class="link">
@@ -523,7 +552,10 @@ People need (and want) transportation alternatives…
 ["D" air quality grade…][ALA]
 </div>
 
+<a v-drag="'cars'" href="https://github.com/hudcostreets/household-vehicles/tree/main/hudson#vehicles-per-household-hudson-county" target="_blank"><img src="/hc_vehs_title.png" /></a>
+<!--
 <img v-drag="'cars'" src="/hc_vehs_title.png" />
+-->
 
 [ALA]: https://www.lung.org/research/sota/city-rankings/states/new-jersey/hudson
 
@@ -555,7 +587,7 @@ dragPos:
 <style>
 .brt {
   &+footer { display: none; }
-  img { z-index: 1 !important; }
+  .jfk { z-index: 1 !important; }
   img[src*="cost"] { z-index: 20 !important; }
   video {
     height: 100%;
@@ -578,10 +610,15 @@ dragPos:
   - Gets them off sidewalk!
 </div>
 
+<div v-drag="'jfk'" class="jfk"><a href="https://www.hcnj.us/wp-content/uploads/2022/02/JFK_Study-Report_Final.pdf" target="_blank"><img src="/jfk-map.png" /></a></div>
+<!--
 <img v-drag="'jfk'" src="/jfk-map.png" />
-
+-->
 <div v-click="2">
+<a v-drag="'cost'" href="https://www.hcnj.us/wp-content/uploads/2022/02/JFK_Study-Report_Final.pdf" target="_blank"><img src="/jfk-crash-cost.png" /></a>
+<!--
 <img v-drag="'cost'" src="/jfk-crash-cost.png" />
+-->
 
 - Crashes on JFK are expensive
   - $27MM/yr directly from crashes
@@ -672,8 +709,12 @@ dragPos:
   - [JC Bike Master Plan][bmp] / [bikejc.github.io/bike-master-plan] / [PDF]
 
 <div v-click class="bb">
+<a v-drag="'bb'" href="https://dev.bikejc.org/bike-bus/map" target="_blank"><img src="/bb-map.png" /></a>
+<a v-drag="'bbl'" href="https://dev.bikejc.org/bike-bus" target="_blank"><img src="/bb-lines.png" /></a>
+<!--
 <img v-drag="'bb'" src="/bb-map.png" />
 <img v-drag="'bbl'" src="/bb-lines.png" />
+-->
 
 [Bike bus (2023)][bb]:
 </div>
@@ -685,7 +726,7 @@ dragPos:
 [PDF]: https://cdn5-hosted.civiclive.com/UserFiles/Servers/Server_6189660/File/Community/Transportation/LetsRideJCMasterPlan-FinalDraft%206.16.19_09_30.pdf
 
 ---
-class: pbls
+class: vd
 dragPos:
   guy: 500,36,383,_
   vd0: 32,126,441,_
@@ -693,7 +734,7 @@ dragPos:
 ---
 
 <style>
-.pbls {
+.vd {
   &+footer { display: none; }
   .slidev-vclick-hidden { display: none; }
   padding-left: 2rem;
@@ -705,7 +746,7 @@ dragPos:
     right: 0;
     z-index: 10;
   }
-  img {
+  .drag {
     width: 45%;
   }
 }
@@ -716,11 +757,18 @@ dragPos:
 
 <video src="/viaduct.mov" controls loop muted />
 
+<div class="drag" v-drag="'vd0'"><a href="https://streetmix.net/streetmix-7762/16/14th-st-viaduct-current" target="_blank"><img src="/vd0.png" /></a></div>
+<div class="drag" v-drag="'vd1'"><a href="https://streetmix.net/streetmix-7762/15/14th-st-viaduct-proposed" target="_blank"><img src="/vd1.png" /></a></div>
+<div v-click>
+<div class="drag" v-drag="'guy'"><a href="https://www.hcnj.us/blog/2025/05/22/15886/" target="_blank"><img src="/vd-pr.png" /></a></div>
+</div>
+<!--
 <img v-drag="'vd0'" src="/vd0.png" />
 <img v-drag="'vd1'" src="/vd1.png" />
 <div v-click>
 <img v-drag="'guy'" src="/vd-pr.png" />
 </div>
+-->
 
 [vd]: https://www.hcnj.us/blog/2025/05/22/15886/
 
@@ -762,9 +810,14 @@ dragPos:
 <img v-drag="'baboe'" src="/baboe.jpg" />
 
 <div v-click="1">
+<a v-drag="'bh'" href="https://www.bikehoboken.org/articles/2024-bike-hoboken-traffic-injury-report" target="_blank"><img src="/bh.png" /></a>
+<a v-drag="'nyc'" href="https://nyc.streetsblog.org/2025/06/10/now-do-cars-adams-and-council-push-for-e-bike-speed-limits-ignores-the-biggest-danger" target="_blank"><img src="/nyc-ebikes.png" /></a>
+<a v-drag="'dot'" href="https://www.nyc.gov/html/dot/html/bicyclists/bikestats.shtml#crashdata" target="_blank"><img src="/nyc-dot.jpg" /></a>
+<!--
 <img v-drag="'bh'" src="/bh.png" />
 <img v-drag="'nyc'" src="/nyc-ebikes.png" />
 <img v-drag="'dot'" src="/nyc-dot.jpg" />
+-->
 </div>
 
 ---
