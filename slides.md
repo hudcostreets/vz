@@ -413,7 +413,7 @@ dragPos:
   - JFK: 25,000 vehicles per day, ≤2,000 per hour
 </div>
 
-<video class="wt" src="/wt.mp4" controls />
+<video class="wt" src="/wt.mp4" autoplay muted controls />
 </div>
 <div v-click="2">
 
