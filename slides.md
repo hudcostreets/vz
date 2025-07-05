@@ -413,7 +413,7 @@ dragPos:
   - JFK: 25,000 vehicles per day, ≤2,000 per hour
 </div>
 
-<video class="wt" src="/wt.mp4" autoplay muted controls />
+<video class="wt" src="/wt.mp4" autoplay muted loop controls />
 </div>
 <div v-click="2">
 
@@ -604,7 +604,7 @@ dragPos:
 
 
 <div v-click="1">
-<video src="/42-brt.mp4" controls loop muted />
+<video src="/42-brt.mp4" controls loop autoplay muted />
 
 - Can double as bike/ebike/scooter lane
   - Gets them off sidewalk!
@@ -755,7 +755,7 @@ dragPos:
 # Bike infrastructure
 [Viaduct multi-use path][vd]!
 
-<video src="/viaduct.mov" controls loop muted />
+<video src="/viaduct.mov" controls loop autoplay muted />
 
 <div class="drag" v-drag="'vd0'"><a href="https://streetmix.net/streetmix-7762/16/14th-st-viaduct-current" target="_blank"><img src="/vd0.png" /></a></div>
 <div class="drag" v-drag="'vd1'"><a href="https://streetmix.net/streetmix-7762/15/14th-st-viaduct-proposed" target="_blank"><img src="/vd1.png" /></a></div>
