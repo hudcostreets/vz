@@ -1,7 +1,4 @@
-# Data @ Hudson County Complete Streets
-[NJ Bike Walk Summit], 3/29/25
+# Toward Vision Zero in Hudson County
+Hudson County Vision Zero Task Force, 6/24/25: **[vz.hccs.dev]**
 
-Slides: [vz.hccs.dev].
-
-[NJ Bike Walk Summit]: https://njbwc.org/summit-2025/
 [vz.hccs.dev]: https://vz.hccs.dev
