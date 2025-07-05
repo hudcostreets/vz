@@ -1,0 +1,7 @@
+import{aJ as a,b as p,o as r,w as c,g as s,ag as e,i as v,ac as g,f as o,v as u,x as _,C as n}from"./modules/vue-BDPYql1M.js";import{I as f}from"./slidev/default-CjDP6IiX.js";import{u as k,f as x}from"./slidev/context-A-Gx3Ij8.js";import"./index-DN9oh83d.js";import"./modules/shiki-DY0obXpQ.js";const w="/viaduct.mov",h="/vd0.png",b="/vd1.png",B="/vd-pr.png",C={class:"drag",markdownSource:[24,25,18]},V={class:"drag"},j={class:"drag"},$={__name:"slides.md__slidev_16",setup(y){const{$clicksContext:d,$frontmatter:l}=k();return d.setup(),(N,t)=>{const i=a("drag"),m=a("click");return r(),p(f,u(_(n(x)(n(l),15))),{default:c(()=>[t[3]||(t[3]=s("h1",null,"Bike infrastructure",-1)),t[4]||(t[4]=s("p",null,[s("a",{href:"https://www.hcnj.us/blog/2025/05/22/15886/",target:"_blank"},"Viaduct multi-use path"),g("!")],-1)),t[5]||(t[5]=s("video",{src:w,controls:"",loop:"",muted:""},null,-1)),e((r(),o("div",C,t[0]||(t[0]=[s("a",{href:"https://streetmix.net/streetmix-7762/16/14th-st-viaduct-current",target:"_blank"},[s("img",{src:h})],-1)]))),[[i,"vd0"]]),e((r(),o("div",V,t[1]||(t[1]=[s("a",{href:"https://streetmix.net/streetmix-7762/15/14th-st-viaduct-proposed",target:"_blank"},[s("img",{src:b})],-1)]))),[[i,"vd1"]]),e((r(),o("div",null,[e((r(),o("div",j,t[2]||(t[2]=[s("a",{href:"https://www.hcnj.us/blog/2025/05/22/15886/",target:"_blank"},[s("img",{src:B})],-1)]))),[[i,"guy"]])])),[[m]]),v(`
+<img v-drag="'vd0'" src="/vd0.png" />
+<img v-drag="'vd1'" src="/vd1.png" />
+<div v-click>
+<img v-drag="'guy'" src="/vd-pr.png" />
+</div>
+`)]),_:1},16)}}};export{$ as default};
